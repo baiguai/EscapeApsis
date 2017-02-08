@@ -18,3 +18,7 @@ git log --graph --oneline --decorate
 
 [Credentials]
 git config credential.helper store
+
+
+[Diagrams]
+The diagrams were made in Yed.
