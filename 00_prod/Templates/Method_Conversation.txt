@@ -1,0 +1,38 @@
+// --[HELPER METHODS]-----------------------------------------------------------
+inputCheck
+{
+    if (shotCount < 1)
+    {
+        do {
+            "<.inputline>";
+            "\b\bTalk to <<label>> or say cancel>> ";
+            "<./inputline>";
+            inp = inputManager.getInputLine(nil, nil);
+        } while (nil);
+
+        match = nil;
+
+        // Ask his name
+        if (Ask(match, inp, 'your name|you called') == true)
+        {
+            match = true;
+            "
+'My name is ...'
+            ";
+        }
+
+        // Tell him you're good
+        if (Respond(match, inp, 'am good|doing good|am fine') == true)
+        {
+            "
+'I am so glad to hear it!'
+            ";
+        }
+
+        if (CancelTalk(inp, label) == nil)
+        {
+            inputCheck;
+        }
+    }
+};
+// -----------------------------------------------------------------------------

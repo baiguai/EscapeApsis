@@ -1,0 +1,143 @@
+#include <adv3.h>
+#include <en_us.h>
+
+NAME:
+    Actor
+    ''
+{
+    location = ;
+    label = '';
+    labelProper = '';
+    noun = '';
+    adjective = '';
+    pronoun = '';
+    corpseObj = nil;
+    isDyst = nil;
+    threshold = 1;
+    isListed = nil;
+    descCount = 0;
+    exCount = 0;
+    canShoot = true;
+    shotCount = 0;
+    inp = "";
+    match = nil;
+
+    travelIndex = 0;
+    travelPath = [
+        TechCenter,
+        CitySquare,
+        RingCity_MainStreet,
+        MainSt_MagswellShop,
+        MainSt_MagswellShop,
+        RingCity_MainStreet,
+        RingCity_MainStreet
+    ];
+
+// --[OUTPUTS]------------------------------------------------------------------
+    msg = [
+        '
+        '
+    ];
+
+    msgDmg = [
+        '
+        '
+    ];
+
+    ex = [
+        '
+        '
+    ];
+
+    exDmg = [
+        '
+        '
+    ];
+
+    shootMsg = [
+        '
+        '
+    ];
+// -----------------------------------------------------------------------------
+
+
+// --[OUTPUT EVENTS]------------------------------------------------------------
+    specialDesc()
+    {
+        Desc_Shootable(self);
+    };
+// -----------------------------------------------------------------------------
+
+
+// --[EVENTS]-------------------------------------------------------------------
+    dobjFor(TalkTo)
+    {
+        action()
+        {
+            if (shotCount < 1)
+            {
+                "You talk to <<label>>.";
+                inputCheck();
+            }
+        };
+    };
+    dobjFor(Examine)
+    {
+        action()
+        {
+            Ex_Shootable(self);
+        };
+    };
+    dobjFor(Shoot)
+    {
+        verify() { logical; }
+        action()
+        {
+            if (ShootGun(self) == true)
+            {
+                me.weapon.ShootMsg(self, '', shootMsg);
+            };
+        };
+    };
+// -----------------------------------------------------------------------------
+
+
+// --[HELPER METHODS]-----------------------------------------------------------
+inputCheck
+{
+    if (shotCount < 1)
+    {
+        do {
+            "<.inputline>";
+            "\b\bTalk to <<label>> or say cancel>> ";
+            "<./inputline>";
+            inp = inputManager.getInputLine(nil, nil);
+        } while (nil);
+
+        match = nil;
+
+        // Ask his name
+        if (Ask(match, inp, 'your name|you called') == true)
+        {
+            match = true;
+            "
+'My name is ...'
+            ";
+        }
+
+        // Tell him you're good
+        if (Respond(match, inp, 'am good|doing good|am fine') == true)
+        {
+            "
+'I am so glad to hear it!'
+            ";
+        }
+
+        if (CancelTalk(inp, label) == nil)
+        {
+            inputCheck;
+        }
+    }
+};
+// -----------------------------------------------------------------------------
+};

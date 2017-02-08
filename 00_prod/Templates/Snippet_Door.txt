@@ -1,0 +1,15 @@
+RingCityApartments_Hall_Door:
+    Door
+    'hall door' 'apartments door'
+{
+    location = RingCityApartments_Lobby;
+};
+
+
+
+RingCityApartments_Hall_Door_Inside:
+    Door -> RingCityApartments_Hall_Door
+    'hall door' 'door'
+{
+    location = RingCityApartments_Hall;
+};

@@ -1,0 +1,10 @@
+// Add a givenFood = nil attribute
+// In the conversatoin add, with customize msgs:
+
+// Ask if you can get some food
+if (Ask(match, inp, 'food') == true)
+{
+    match = true;
+    Heal(self, 1, 'He hands you a pastry. You eat it and immediately
+        feel revived.', 'I\'m sorry but I\'m out of food.');
+}

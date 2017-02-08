@@ -1,0 +1,52 @@
+#include <adv3.h>
+#include <en_us.h>
+
+NAME:
+    Actor
+    ''
+{
+    label = '';
+    labelProper = '';
+    location = ;
+    noun = '';
+    adjective = '';
+    isDyst = true;
+    isNpc = true;
+    threshold = 2;
+    isListed = nil;
+    descCount = 0;
+    exCount = 0;
+    canShoot = true;
+    shotCount = 0;
+
+    // FIGHTING ATTRIBUTES
+    isEnemy = true;
+    life = 2;
+    initiative = 1;
+    chance = 65;
+
+// --[OUTPUTS]------------------------------------------------------------------
+    message = '
+    ';
+
+    deadMessage = '
+    ';
+
+    shootMsg = [
+        '
+        '
+    ];
+// -----------------------------------------------------------------------------
+
+
+// --[OUTPUT EVENTS]------------------------------------------------------------
+    specialDesc()
+    {
+        Desc_Shootable(self);
+        if (life > 0)
+        {
+            FightingMode(self);
+        }
+    };
+// -----------------------------------------------------------------------------
+};

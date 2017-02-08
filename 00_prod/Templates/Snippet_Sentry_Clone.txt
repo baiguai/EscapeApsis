@@ -1,0 +1,7 @@
+local name = 'sentry' + (ix + 1);
+local sentry = new SentryRobot;
+sentry.name = name;
+cmdDict.addWord(sentry, name, &noun);
+cmdDict.addWord(sentry, 'robot', &noun);
+sentry.moveIntoForTravel(LOCATION);
+FightingMode(sentry);

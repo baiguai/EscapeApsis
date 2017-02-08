@@ -1,0 +1,11 @@
+IFID: b8563851-6257-77c3-04ee-278ceaeb48ad
+Name: Escape Apsis
+Byline: baiguai
+AuthorEmail: baiguai.junk@gmail.com
+Desc: Fight your way to the bridge and take the ship.
+Version: 1
+ReleaseDate: 2017-02-08
+Language: en-US
+LicenseType: Freeware
+CopyingRules: Nominal cost only; compilations allowed
+PresentationProfile: Default

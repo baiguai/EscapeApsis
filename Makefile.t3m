@@ -1,0 +1,40 @@
+-o Game.t3
+
+-DLANGUAGE=en_us
+-DMESSAGESTYLE=neu
+#-D TADS_INCLUDE_NET
+-Fy obj -Fo obj
+-o Game.t3
+-lib system
+-lib adv3/adv3
+
+#-lib adv3/adv3web
+#-lib webui
+#lib/tadsnet.t
+
+
+# Global Files
+GameFiles/Contents/Lib_Contents.tl
+GameFiles/Lib_Game.tl
+GameFiles/Objects/Lib_Objects.tl
+GameFiles/Weapons/Lib_Weapons.tl
+
+# Achievements
+GameFiles/Achievements/Lib_Achievements.tl
+
+# Help Files
+GameFiles/Help/Lib_Help.tl
+
+
+# CHARACTERS
+GameFiles/Characters/Lib_Characters.tl
+# ENEMIES
+GameFiles/Enemies/Lib_Enemies.tl
+
+
+# LOCATIONS
+GameFiles/Locations/Limbo.t
+
+# BRIG
+GameFiles/Locations/Brig/Lib_Brig.tl
+GameFiles/Locations/Brig/Cell04/Lib_Brig_Cell04.tl

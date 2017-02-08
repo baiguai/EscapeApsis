@@ -1,0 +1,82 @@
+#include <adv3.h>
+#include <en_us.h>
+
+NAME:
+    Fixture
+    ''
+{
+    location = ;
+    label = '';
+    labelProper = '';
+    specialDescOrder = 1;
+    noun = '' '';
+    adjective = '' '';
+    isDyst = nil;
+    threshold = 1;
+    isListed = nil;
+    descCount = 0;
+    exCount = 0;
+    canShoot = true;
+    shotCount = 0;
+    damageType = '';
+
+// --[OUTPUTS]------------------------------------------------------------------
+    msg = [
+        '
+        '
+    ];
+
+    msgDmg = [
+        '
+        '
+    ];
+
+    ex = [
+        '
+        '
+    ];
+
+    exDmg = [
+        '
+        '
+    ];
+
+    shootMsg = [
+        '
+        '
+    ];
+// -----------------------------------------------------------------------------
+
+
+// --[OUTPUT EVENTS]------------------------------------------------------------
+    specialDesc()
+    {
+        Desc_Shootable(self);
+    };
+// -----------------------------------------------------------------------------
+
+
+// --[EVENTS]-------------------------------------------------------------------
+    dobjFor(Examine)
+    {
+        action()
+        {
+            if (damageType == 'smallShot')
+            {
+                Ex_Shootable(self);
+            }
+        };
+    };
+    dobjFor(Shoot)
+    {
+        verify() { logical; }
+        action()
+        {
+            if (ShootGun(self) == true)
+            {
+                me.weapon.ShootMsg(self, '', shootMsg);
+            };
+        };
+    };
+// -----------------------------------------------------------------------------
+};
