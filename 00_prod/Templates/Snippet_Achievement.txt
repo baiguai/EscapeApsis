@@ -1,0 +1,3 @@
+Achieve_ArmYourself.awardPointsOnce();
+gameMain.CurrentGoal = 'Disable the cameras before the power is restored.';
+ShowGoal();

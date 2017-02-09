@@ -14,6 +14,7 @@ Brig_Cell04_Bonds:
     'bonds'
 {
     location = Brig_Cell04;
+    specialDescOrder = 1;
     noun = 'bonds';
     adjective = 'disabled' 'enabled';
     isPlural = true;

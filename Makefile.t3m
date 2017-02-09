@@ -37,4 +37,8 @@ GameFiles/Locations/Limbo.t
 
 # BRIG
 GameFiles/Locations/Brig/Lib_Brig.tl
+GameFiles/Locations/Brig/Cell01/Lib_Brig_Cell01.tl
+GameFiles/Locations/Brig/Cell02/Lib_Brig_Cell02.tl
+GameFiles/Locations/Brig/Cell03/Lib_Brig_Cell03.tl
 GameFiles/Locations/Brig/Cell04/Lib_Brig_Cell04.tl
+GameFiles/Locations/Brig/HoldingCell/Lib_Brig_HoldingCell.tl

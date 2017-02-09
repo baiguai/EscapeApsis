@@ -242,16 +242,30 @@ WeaponChargeCheck()
 
     if (weapon.isGun == true && weapon.isEnergy == true)
     {
-        if (weapon.shotCount == 0 && weapon.currentCharge < weapon.chargeTime)
+        //if (weapon.shotCount == 0 && weapon.currentCharge < weapon.chargeTime)
+        if (weapon.shotCount < weapon.shotCapacity)
         {
-            weapon.currentCharge++;
+            weapon.shotCount++;
         }
         
-        if (weapon.currentCharge == weapon.chargeTime)
+        if (weapon.shotCount > weapon.shotCapacity)
         {
             weapon.shotCount = weapon.shotCapacity;
-            weapon.currentCharge = 0;
         }
     }
+};
+// -----------------------------------------------------------------------------
+
+
+// --[ENEMY SPAWNING]-----------------------------------------------------------
+SpawnGuard(location)
+{
+    local name = 'guard';
+    local guard = new Guard;
+    guard.name = name;
+    cmdDict.addWord(guard, name, &noun);
+    cmdDict.addWord(guard, 'guard', &noun);
+    guard.moveIntoForTravel(location);
+    FightingMode(guard);
 };
 // -----------------------------------------------------------------------------

@@ -4,7 +4,7 @@ Byline: baiguai
 AuthorEmail: baiguai.junk@gmail.com
 Desc: Fight your way to the bridge and take the ship.
 Version: 1
-ReleaseDate: 2017-02-08
+ReleaseDate: 2017-02-09
 Language: en-US
 LicenseType: Freeware
 CopyingRules: Nominal cost only; compilations allowed

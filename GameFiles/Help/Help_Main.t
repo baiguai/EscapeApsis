@@ -9,7 +9,7 @@ DefineIAction(Help)
         cls();
 
         "
-Esrevinu uses standard Interactive Fiction commands.
+<<gameMain.GameName>> uses standard Interactive Fiction commands.
 If you are unfamiliar with these basic commands, look on the
 internet for further information.
 \b
@@ -25,8 +25,9 @@ shoot Bob
 \n
 (When you are fighting an enemy, you only have to say shoot)
 \n
-If your gun is an energy weapon, when it is out of energy reserve
-you must wait until it recharges to use it.
+If your weapon is an energy gun it must be charged between uses, otherwise
+it can run out of energy. Traveling to new locations will give it
+time to recharge. To view its status use the STATS command (See below).
 \b
 Talking to people say talk to. For example, to talk to Bob say:
 \n
@@ -57,6 +58,10 @@ stats
 To view the current goal say:
 \n
 goal
+\b
+To view your current score say:
+\n
+score
         ";
     }
 ;

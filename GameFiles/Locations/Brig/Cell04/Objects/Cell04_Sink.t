@@ -23,7 +23,7 @@ Brig_Cell04_Sink:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the north east corner of the cell is a small sink
+In the forward starboard corner of the cell is a small sink
         '
     ];
 

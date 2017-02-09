@@ -31,6 +31,8 @@ Brig:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        Desc_Location(self);
+
         "
 The brig is dingy and dim.
 <<Ship.PowerGeneratorOn == nil ?
@@ -44,19 +46,21 @@ It is lit only by a couple of flickering flourescent tubes overhead.
 >>
 The walls are filthy and rust is breaking out here and there along their edges.
 \n
-It contains four cramped cells arranged along the east, south, and west walls
-(north being the ship's forward).
-In the north wall, east of the entrance is the guard post.
+It contains four cramped cells arranged along the starboard, aft, and port walls
+In the forward wall, starboard of the entrance is the guard post.
 It is enclosed in thick armored glass.
-The entrance to the gard post is in its west wall, nearest the brig's entrance.
+The entrance to the gard post is in its port wall, nearest the brig's entrance.
 \n
-A closet is set into the south east corner and a small holding cell is located
-in the north west corner.
+A closet is set into the aft starboard corner and a small holding cell is located
+in the forward port corner.
 \n
 In the center of the brig is a small kitchen unit and a mess table that are
 used by the guards as they work long shifts.
 \n
-There are three cameras in the brig, all networked to the guard post. You
+In the aft port corner, mounted on the ceiling is a camera.
+In the aft starboard corner, mounted on the ceiling is a camera.
+\n
+All the cameras are networked to the guard post. You
 can see the armored conduit running from each camera back to the guard post
 enclosure.
 \n
@@ -65,19 +69,36 @@ scanner.
 \b\b
         ";
 
-        Desc_Location(self);
+        if (Brig_Camera01.shotCount < 1 ||
+            Brig_Camera02.shotCount < 1 ||
+            Brig_Camera03.shotCount < 1)
+        {
+            if (Ship.PowerGeneratorOn == true)
+            {
+                SpawnGuard(me.location);
+            }
+        }
     };
 // -----------------------------------------------------------------------------
 
 
-// --[NAVIGATION]---------------------------------------------------------------
-    north: TravelWithMessage, RoomConnector {
-        travelDesc()
+// --[HELPER METHODS]-----------------------------------------------------------
+    CameraCheck()
+    {
+        if (Brig_Camera01.shotCount > 0 &&
+            Brig_Camera02.shotCount > 0 &&
+            Brig_Camera03.shotCount > 0)
         {
-            Desc_Navigation('');
-        };
-        room1 = Brig;
-        room2 = Brig;
+            if (gameMain.CurrentGoal == 'Disable the cameras before the power is restored.')
+            {
+                Achieve_DisableBrigCameras.awardPointsOnce();
+                gameMain.CurrentGoal = 'Escape the brig.';
+                ShowGoal();
+            }
+        }
+        else
+        {
+        }
     };
 // -----------------------------------------------------------------------------
 };
@@ -96,24 +117,28 @@ Brig_HoldingCell_Door:
     'holding cell door' 'holding cell door'
 {
     location = Brig;
+    keyList = [Brig_Guard_PComm];
 }
 Brig_Cell01_Door:
     LockableWithKey, Door
     'cell 1 door' 'cell 1 door'
 {
     location = Brig;
+    keyList = [Brig_Guard_PComm];
 }
 Brig_Cell02_Door:
     LockableWithKey, Door
     'cell 2 door' 'cell 2 door'
 {
     location = Brig;
+    keyList = [Brig_Guard_PComm];
 }
 Brig_Cell03_Door:
     LockableWithKey, Door
     'cell 3 door' 'cell 3 door'
 {
     location = Brig;
+    keyList = [Brig_Guard_PComm];
 }
 Brig_Closet_Door:
     LockableWithKey, Door
@@ -127,5 +152,6 @@ Brig_Cell04_Door:
 {
     location = Brig;
     isLocked = nil;
+    keyList = [Brig_Guard_PComm];
 }
 // -----------------------------------------------------------------------------

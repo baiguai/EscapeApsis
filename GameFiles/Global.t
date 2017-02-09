@@ -13,6 +13,15 @@ VerbRule(Goal)
  : GoalAction
  verbPhrase = 'goal/g'
 ;
+
+ShowGoal()
+{
+    "
+\b
+[Goal: <<gameMain.CurrentGoal>>]
+\b
+    ";
+};
 // -----------------------------------------------------------------------------
 
 // --[ADD NOTE]-----------------------------------------------------------------
@@ -94,15 +103,26 @@ ShowStats()
     "Player Stats:\n";
     "Life: <<me.life>>\n";
     "Initiative: <<me.initiative>>\b";
-    "Weapon: <<me.weapon.name>>\n";
-    "Damage Value: <<me.weapon.damageValue>>\n";
-    if (me.weapon.isGun == true)
+    if (me.weapon == nil)
     {
-        "Shot Capacity: <<me.weapon.shotCapacity>>\n";
-        "Current Capacity: <<me.weapon.shotCount>>\n";
-        if (me.weapon.isEnergy == true)
+        "Weapon: none\n";
+    }
+    else
+    {
+        "Weapon: <<me.weapon.name>>\n";
+        "Damage Value: <<me.weapon.damageValue>>\n";
+        if (me.weapon.isGun == true)
         {
-            "Charge Time: <<me.weapon.chargeTime>>\n";
+            "Shot Capacity: <<me.weapon.shotCapacity>>\n";
+            "Current Capacity: <<me.weapon.shotCount>>\n";
+            if (me.weapon.isEnergy == true && me.weapon.shotCount < me.weapon.shotCapacity)
+            {
+                "Weapon Charge Status: Charging\n";
+            }
+            else
+            {
+                "Weapon Charge Status: Fully Charged\n";
+            }
         }
     }
 };

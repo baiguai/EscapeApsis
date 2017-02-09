@@ -23,17 +23,17 @@ Brig_Cell04_Cot:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Along the east wall is the small cot you have been sleeping on.
+Along the starboard wall is the small cot you have been sleeping on.
         '
     ];
 
     msgDmg = [
         '
-Along the east wall is the small cot you have been sleeping on.
+Along the starboard wall is the small cot you have been sleeping on.
 A smouldering hole has been shot into it.
         ',
         '
-Along the east wall is the small cot you have been sleeping on.
+Along the starboard wall is the small cot you have been sleeping on.
 Multiple shots have been fired into the cot.
         '
     ];

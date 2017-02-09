@@ -1,9 +1,16 @@
 #include <adv3.h>
 #include <en_us.h>
 
-EPistol: Thing 'energy pistol' 'Energy Pistol'
+/*
+Epistol
+--------------------------------------------------------------------------------
+Level 1 weapon. The player will NEED to pick this up to progress successfully.
+--------------------------------------------------------------------------------
+*/
+EPistol: Thing
+'Energy Pistol' 'energy pistol'
 {
-    location = Brig_Cell04; // UtopiaRingCity_TechCenter_West_Car
+    location = Brig_Guard; // UtopiaRingCity_TechCenter_West_Car
     label = 'the energy pistol';
     labelGen = 'the pistol';
     labelProper = 'The energy pistol';
@@ -43,13 +50,15 @@ Near the back of the pistol is a small charge indicator.
         
         action()
         {
-            if (EPistol.location == Brig_Guard)
-            {
-                "
-                ";
-            }
             me.weapon = EPistol;
             inherited();
+
+            if (gameMain.CurrentGoal == 'Arm yourself')
+            {
+                Achieve_ArmYourself.awardPointsOnce();
+                gameMain.CurrentGoal = 'Disable the cameras before the power is restored.';
+                ShowGoal();
+            }
         }
     };
 

@@ -2,8 +2,14 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Achieve_EscapeTheVent: Achievement { 
+Achieve_ArmYourself: Achievement { 
     +1 
-    "You have escaped the ventilation system."
+    "You have successfully armed yourself."
+    achieved = nil
+};
+
+Achieve_DisableBrigCameras: Achievement { 
+    +1 
+    "You have successfully disabled the cameras."
     achieved = nil
 };

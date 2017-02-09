@@ -16,6 +16,7 @@ versionInfo: GameID
 
 gameMain: GameMainDef
 {
+    GameName = "Escape Apsis";
     DEVMODE = true;
     initialPlayerChar = me;
     CurrentGoal = 'Arm yourself';
@@ -37,6 +38,17 @@ gameMain: GameMainDef
 
     showIntro()
     {
+        // --[INITIAL SHIP ATTRIBUTE SETUP]-------------------------------------
+        Ship.PowerOff();
+
+        local name = 'med capsule';
+        local capsule = new MedCapsule;
+        capsule.name = name;
+        cmdDict.addWord(capsule, name, &noun);
+        cmdDict.addWord(capsule, 'capsule', &noun);
+        capsule.moveInto(Brig_Guard);
+        // ---------------------------------------------------------------------
+
         // --[ONE TIME PLAYER ATTRIBUTE SETTING]--------------------------------
         if (me.life == 0)
         {
@@ -77,8 +89,8 @@ gameMain: GameMainDef
         // --[GAME INTRO]-------------------------------------------------------
         "
             \b\b
-            You are the infamous prisoner Stalinis Maxuel.
-            Your lucrative career as an interstellar pirate has come to an end.
+            You are the infamous pirate Stalinis Maxuel.
+            Your lucrative interstellar career has come to an end.
             Off the rings of Saturn you were taken prisoner aboard the military
             vessel Apsis.
             \n
@@ -87,12 +99,14 @@ gameMain: GameMainDef
             While breaking free of Saturn space the ship inadvertently skimmed
             the rings and was struck by debris damaging its shields and
             navigation system. The resulting momentary power outage disabled
-            your restraints long enough to free you.
+            your restraints long enough for you to break free just as a
+            guard was bringing your supper.
             \n
-            You managed to kill the guard who was in the brig with you at the
-            time.
+            You managed to kill the guard with your bare hands.
             \n
             If you can get to the bridge, you can take the Apsis.
+            You know that the brig is somewhere in the ship's aft, and assume
+            its door is forward, so your cell's door is in the port wall.
             \b\b
 
             [Goal: <<gameMain.CurrentGoal>>]
@@ -126,6 +140,7 @@ me: Actor
             <<VisitAdjustment(dest)>>
             <<WeaponChargeCheck()>>
             <<TimePassage(gameMain.PassageInterval)>>
+            <<Ship.StateUpdate()>>
         '); // after room description
     };
 };

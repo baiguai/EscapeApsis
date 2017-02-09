@@ -25,22 +25,23 @@ Brig_Cell04:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        Desc_Location(self);
+
         "
 <<Ship.PowerGeneratorOn == nil ?
 '
-The small cell is bathed in dim red auxiliary light.
+Your small cell is bathed in dim red auxiliary light.
+It appears that the power generator is still out.
 ' :
 '
 Dim flickering light from the brig\'s overhead flourescents fills the small
 cell.
 '
 >>
-The rest of the cell are bare.
-In the west wall is the cell door.
+The rest of the cell is bare.
+In the port wall is the cell door.
 \b\b
         ";
-
-        Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
 };

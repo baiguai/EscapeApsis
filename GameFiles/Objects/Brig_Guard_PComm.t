@@ -1,11 +1,19 @@
 #include <adv3.h>
 #include <en_us.h>
 
+/*
+Guard's PComm
+--------------------------------------------------------------------------------
+The player will want to pick this up. It serves as the key to the brig cells,
+guard room, and brig door. It may also open other doors in the ship.
+Serves as access to level 01 areas.
+--------------------------------------------------------------------------------
+*/
 Brig_Guard_PComm:
     Thing, Key
     'pcomm' 'PComm'
 {
-    location = Brig_Cell04;
+    location = Brig_Guard;
     noun = 'PComm';
     adjective = '';
     isDyst = nil;
@@ -23,7 +31,13 @@ Brig_Guard_PComm:
 
     ex = [
         '
-You examine the dead guard\'s PComm...
+You examine the dead guard\'s PComm.
+It is locked with a passcode. You make a few guesses at it, but not surprising,
+fail to unlock it.
+        ',
+        '
+You examine the dead guard\'s PComm.
+It is locked with a passcode.
         '
     ];
 // -----------------------------------------------------------------------------

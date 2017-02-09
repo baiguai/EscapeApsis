@@ -3,7 +3,7 @@
 
 Brig_Guard:
     Actor
-    'Guard'
+    'Guard' 'guard'
 {
     label = 'the guard';
     labelProper = 'The guard';
@@ -70,5 +70,10 @@ In a holster at the guard\'s waist is an energy pistol.
             FightingMode(self);
         }
     };
+    
+    checkTakeFromInventory(actor, obj)
+    {
+        "You take the <<obj.name>>.";
+    }
 // -----------------------------------------------------------------------------
 };
