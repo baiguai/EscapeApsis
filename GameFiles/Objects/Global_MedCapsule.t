@@ -20,6 +20,7 @@ MedCapsule:
     descCount = 0;
     exCount = 0;
     canShoot =nil;
+    carryingAdjustment = 0; // < 0 decreases chance of being carried
 
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [

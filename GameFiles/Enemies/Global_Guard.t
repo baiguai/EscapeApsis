@@ -29,8 +29,11 @@ Guard:
     // FIGHTING ATTRIBUTES
     isEnemy = true;
     life = 0;
+    lifeMin = 2;
+    lifeMax = 1;
     initiative = 1;
     chance = 65;
+    carryingChance = 50;
 
 // --[OUTPUTS]------------------------------------------------------------------
     message = '

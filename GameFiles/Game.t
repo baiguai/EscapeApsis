@@ -40,13 +40,8 @@ gameMain: GameMainDef
     {
         // --[INITIAL SHIP ATTRIBUTE SETUP]-------------------------------------
         Ship.PowerOff();
-
-        local name = 'med capsule';
-        local capsule = new MedCapsule;
-        capsule.name = name;
-        cmdDict.addWord(capsule, name, &noun);
-        cmdDict.addWord(capsule, 'capsule', &noun);
-        capsule.moveInto(Brig_Guard);
+        SpawnMedCapsule(Brig_Guard);
+        SpawnGuard(Brig);
         // ---------------------------------------------------------------------
 
         // --[ONE TIME PLAYER ATTRIBUTE SETTING]--------------------------------

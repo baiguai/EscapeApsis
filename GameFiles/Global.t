@@ -317,7 +317,7 @@ typographicalOutputFilter.activate();
 
 
 
-// --[shooting]-------------------------------------------------------------------------
+// --[SHOOTING]-----------------------------------------------------------------
 /*
 Within the 'shootable' objects add the following along with any logic for what shooting it does to it:
 
@@ -368,4 +368,17 @@ dobjFor(Shoot)
     }
 }
 ;
+// -----------------------------------------------------------------------------
+
+
+// --[SPAWNING ITEMS]-----------------------------------------------------------
+SpawnMedCapsule(location)
+{
+    local name = 'med capsule';
+    local capsule = new MedCapsule;
+    capsule.name = name;
+    cmdDict.addWord(capsule, name, &noun);
+    cmdDict.addWord(capsule, 'capsule', &noun);
+    capsule.moveInto(location);
+};
 // -----------------------------------------------------------------------------

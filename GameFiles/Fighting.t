@@ -37,11 +37,18 @@ FightTurn(obj)
     {
         match = true;
         ShootGun(obj);
+        if (obj.life > 0)
+        {
+            FightTurn(obj);
+        }
     }
-
-    if (obj.life > 0)
+    else
     {
-        FightTurn(obj);
+        if (obj.life > 0)
+        {
+            KillCheck(obj);
+            FightTurn(obj);
+        }
     }
 };
 // -----------------------------------------------------------------------------
@@ -81,7 +88,7 @@ KillCheck(obj)
             }
 
             "
-\tYou have been attacked by <<obj.label>> and have lost 1 life point,
+\tYou have been attacked by <<obj.label>> and have lost 1 of " + me.life + " life points,
 \tyou have <<me.life>> left.
 \b\b
             ";
@@ -265,7 +272,15 @@ SpawnGuard(location)
     guard.name = name;
     cmdDict.addWord(guard, name, &noun);
     cmdDict.addWord(guard, 'guard', &noun);
+
+    guard.life = rand(guard.lifeMax) + guard.lifeMin;
+
+    // Add items to the enemy
+    if (rand(100) > guard.carryingChance + MedCapsule.carryingAdjustment)
+    {
+        SpawnMedCapsule(guard);
+    }
+
     guard.moveIntoForTravel(location);
-    FightingMode(guard);
 };
 // -----------------------------------------------------------------------------

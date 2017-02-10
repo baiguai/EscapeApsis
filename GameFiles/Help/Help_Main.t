@@ -22,9 +22,12 @@ To shoot something say shoot followed by the thing or person you want
 to shoot. For example, to shoot Bob you would say:
 \n
 shoot Bob
+\b
+Fighting
 \n
-(When you are fighting an enemy, you only have to say shoot)
-\n
+When you are fighting an enemy, you only have to say shoot. You cannot
+exit out of the fight until you, or the enemy, is dead.
+\b
 If your weapon is an energy gun it must be charged between uses, otherwise
 it can run out of energy. Traveling to new locations will give it
 time to recharge. To view its status use the STATS command (See below).
