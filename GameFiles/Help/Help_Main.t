@@ -65,6 +65,11 @@ goal
 To view your current score say:
 \n
 score
+\b
+Unlocking doors
+\n
+To unlock a door, specify the key:
+unlock door with brass key
         ";
     }
 ;

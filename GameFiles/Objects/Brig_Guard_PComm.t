@@ -10,7 +10,7 @@ Serves as access to level 01 areas.
 --------------------------------------------------------------------------------
 */
 Brig_Guard_PComm:
-    Thing, Key
+    Key
     'pcomm' 'PComm'
 {
     location = Brig_Guard;

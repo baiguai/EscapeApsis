@@ -11,7 +11,7 @@ built into them.
 */
 Brig_Cell04_Bonds:
     Thing
-    'bonds'
+    'bonds' 'bonds'
 {
     location = Brig_Cell04;
     specialDescOrder = 1;

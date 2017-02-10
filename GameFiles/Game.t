@@ -41,7 +41,6 @@ gameMain: GameMainDef
         // --[INITIAL SHIP ATTRIBUTE SETUP]-------------------------------------
         Ship.PowerOff();
         SpawnMedCapsule(Brig_Guard);
-        SpawnGuard(Brig);
         // ---------------------------------------------------------------------
 
         // --[ONE TIME PLAYER ATTRIBUTE SETTING]--------------------------------
