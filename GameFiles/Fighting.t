@@ -262,25 +262,3 @@ WeaponChargeCheck()
     }
 };
 // -----------------------------------------------------------------------------
-
-
-// --[ENEMY SPAWNING]-----------------------------------------------------------
-SpawnGuard(location)
-{
-    local name = 'guard';
-    local guard = new Guard;
-    guard.name = name;
-    cmdDict.addWord(guard, name, &noun);
-    cmdDict.addWord(guard, 'guard', &noun);
-
-    guard.life = rand(guard.lifeMax) + guard.lifeMin;
-
-    // Add items to the enemy
-    if (rand(100) > guard.carryingChance + MedCapsule.carryingAdjustment)
-    {
-        SpawnMedCapsule(guard);
-    }
-
-    guard.moveIntoForTravel(location);
-};
-// -----------------------------------------------------------------------------

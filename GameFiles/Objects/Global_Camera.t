@@ -1,51 +1,53 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Brig_Camera01:
-    Fixture
-    'forward camera' 'forward camera'
+/*
+CAMERA
+--------------------------------------------------------------------------------
+Cameras are found throughout level one. If the power generator is functional
+a random check is made, if that check succeeds a guard enters the camera's
+location.
+--------------------------------------------------------------------------------
+*/
+Camera01:
+    Heavy, Thing
+    'camera' 'camera'
 {
-    location = Brig;
-    label = 'the forward camera';
-    labelProper = 'The forward camera';
-    specialDescOrder = 1;
+    location = Limbo;
     noun = 'camera';
-    adjective = 'forward';
+    adjective = 'security';
     isDyst = nil;
-    threshold = 1;
-    isListed = nil;
+    threshold = nil;
     descCount = 0;
     exCount = 0;
     canShoot = true;
     shotCount = 0;
     damageType = '';
+    guardCheck = 50;
 
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the forward, near the brig door, mounted on the ceiling is a camera.
         '
     ];
 
     msgDmg = [
         '
-In the forward, near the brig door, mounted on the ceiling is a camera.
-It has been shot and destroyed.
         '
     ];
 
     ex = [
         '
-You examine the forward camera.
-It is a small rotating half sphere mounted to the ceiling.
-It slowly rotates, scanning the brig.
+You examine the camera.
+It is a semicircular glass dome with the camera inside.
+It is slowly rotating, scanning the area.
         '
     ];
 
     exDmg = [
         '
-You examine the forward camera.
-It has been shot and destroyed.
+You examine the camera.
+It has been shot and destroyed. It is no longer functional.
         '
     ];
 
@@ -59,6 +61,15 @@ It has been shot and destroyed.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     specialDesc()
     {
+        // If the generator is functional, check for guard spawn
+        if (shotCount < 1 && Ship.PowerGeneratorOn == true)
+        {
+            if (rand(100) > guardCheck)
+            {
+                SpawnGuard(self.location, 'guard');
+            }
+        }
+
         Desc_Shootable(self);
     };
 // -----------------------------------------------------------------------------
@@ -83,7 +94,6 @@ It has been shot and destroyed.
             if (ShootGun(self) == true)
             {
                 me.weapon.ShootMsg(self, '', shootMsg);
-                Brig.CameraCheck();
             };
         };
     };

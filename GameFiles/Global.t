@@ -372,13 +372,44 @@ dobjFor(Shoot)
 
 
 // --[SPAWNING ITEMS]-----------------------------------------------------------
-SpawnMedCapsule(location)
+SpawnMedCapsule(location, medName)
 {
-    local name = 'med capsule';
     local capsule = new MedCapsule;
-    capsule.name = name;
-    cmdDict.addWord(capsule, name, &noun);
-    cmdDict.addWord(capsule, 'capsule', &noun);
+    capsule.name = medName;
+    cmdDict.addWord(capsule, medName, &noun);
     capsule.moveInto(location);
+
+    return capsule;
+};
+SpawnCamera01(location, camName, camAdj)
+{
+    local camera = new Camera01;
+    camera.name = camName;
+    cmdDict.addWord(camera, camName, &noun);
+    cmdDict.addWord(camera, camAdj, &adjective);
+    camera.moveInto(location);
+
+    return camera;
+};
+
+SpawnGuard(location, guardName)
+{
+    local name = guardName;
+    local guard = new Guard;
+    guard.name = name;
+    cmdDict.addWord(guard, name, &noun);
+    cmdDict.addWord(guard, 'guard', &noun);
+
+    guard.life = rand(guard.lifeMax) + guard.lifeMin;
+
+    // Add items to the enemy
+    if (rand(100) > guard.carryingChance + MedCapsule.carryingAdjustment)
+    {
+        SpawnMedCapsule(guard, 'med capsule');
+    }
+
+    guard.moveIntoForTravel(location);
+
+    return guard;
 };
 // -----------------------------------------------------------------------------

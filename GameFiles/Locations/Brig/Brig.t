@@ -7,6 +7,10 @@ Brig:
     roomName = "Brig";
     visitCount = 0;
     descCount = 0;
+    hasSpawned = nil;
+    camera01 = nil;
+    camera02 = nil;
+    camera03 = nil;
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -31,6 +35,14 @@ Brig:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        if (hasSpawned == nil)
+        {
+            camera01 = SpawnCamera01(Brig, 'forward', 'camera');
+            //camera02 = SpawnCamera01(Brig, 'camera aft port');
+            //camera02 = SpawnCamera01(Brig, 'camera aft starboard');
+            hasSpawned = true;
+        }
+
         Desc_Location(self);
 
         "
@@ -47,6 +59,7 @@ It is lit only by a couple of flickering flourescent tubes overhead.
 The walls are filthy and rust is breaking out here and there along their edges.
 \n
 It contains four cramped cells arranged along the starboard, aft, and port walls
+\n
 In the forward wall, starboard of the entrance is the guard post.
 It is enclosed in thick armored glass.
 The entrance to the gard post is in its port wall, nearest the brig's entrance.
@@ -69,13 +82,13 @@ scanner.
 \b\b
         ";
 
-        if (Brig_Camera01.shotCount < 1 ||
-            Brig_Camera02.shotCount < 1 ||
-            Brig_Camera03.shotCount < 1)
+        if (camera01.shotCount < 1 ||
+            camera02.shotCount < 1 ||
+            camera03.shotCount < 1)
         {
             if (Ship.PowerGeneratorOn == true)
             {
-                SpawnGuard(me.location);
+                SpawnGuard(me.location, 'guard');
             }
         }
     };
@@ -85,9 +98,9 @@ scanner.
 // --[HELPER METHODS]-----------------------------------------------------------
     CameraCheck()
     {
-        if (Brig_Camera01.shotCount > 0 &&
-            Brig_Camera02.shotCount > 0 &&
-            Brig_Camera03.shotCount > 0)
+        if (camera01.shotCount > 0 &&
+            camera02.shotCount > 0 &&
+            camera03.shotCount > 0)
         {
             if (gameMain.CurrentGoal == 'Disable the cameras before the power is restored.')
             {
@@ -152,6 +165,13 @@ Brig_Cell04_Door:
 {
     location = Brig;
     isLocked = nil;
+    keyList = [Brig_Guard_PComm];
+}
+Brig_GuardPost_Door:
+    LockableWithKey, Door
+    'guard post door' 'guard post door'
+{
+    location = Brig;
     keyList = [Brig_Guard_PComm];
 }
 // -----------------------------------------------------------------------------

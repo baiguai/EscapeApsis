@@ -40,7 +40,7 @@ gameMain: GameMainDef
     {
         // --[INITIAL SHIP ATTRIBUTE SETUP]-------------------------------------
         Ship.PowerOff();
-        SpawnMedCapsule(Brig_Guard);
+        SpawnMedCapsule(Brig_Guard, 'med capsule');
         // ---------------------------------------------------------------------
 
         // --[ONE TIME PLAYER ATTRIBUTE SETTING]--------------------------------
