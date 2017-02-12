@@ -1,16 +1,16 @@
 #include <adv3.h>
 #include <en_us.h>
 
-NAME:
+GuardPost_Cabinet:
     Fixture
-    '' ''
+    'cabinet' 'cabinet'
 {
-    location = ;
-    label = '';
-    labelProper = '';
-    specialDescOrder = 1;
-    noun = '' '';
-    adjective = '' '';
+    location = Brig_GuardPost;
+    label = 'the cabinet';
+    labelProper = 'The cabinet';
+    specialDescOrder = 40;
+    noun = 'cabinet';
+    adjective = 'guard post' 'filing';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
@@ -23,21 +23,27 @@ NAME:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+Along the aft wall is a filing cabinet.
         '
     ];
 
     msgDmg = [
         '
+Along the aft wall is a filing cabinet.
+It has been shot and damaged.
         '
     ];
 
     ex = [
         '
+You examine the filing cabinet.
         '
     ];
 
     exDmg = [
         '
+You examine the filing cabinet.
+It has been shot and damaged.
         '
     ];
 

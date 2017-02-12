@@ -1,16 +1,15 @@
 #include <adv3.h>
 #include <en_us.h>
 
-NAME:
+GuardPost_Chair:
     Fixture
-    '' ''
+    'extra chair' 'extra chair'
 {
-    location = ;
-    label = '';
-    labelProper = '';
-    specialDescOrder = 1;
-    noun = '' '';
-    adjective = '' '';
+    location = Brig_GuardPost;
+    label = 'chiar';
+    specialDescOrder = 30;
+    noun = 'chair';
+    adjective = 'extra';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
@@ -23,21 +22,29 @@ NAME:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+In the aft starboard corner of the room is an extra chair.
         '
     ];
 
     msgDmg = [
         '
+In the aft starboard corner of the room is an extra chair.
+It has been shot and damaged.
         '
     ];
 
     ex = [
         '
+You examine the chair.
+It is made of black leather and chrome.
         '
     ];
 
     exDmg = [
         '
+You examine the chair.
+It is made of black leather and chrome.
+It has been shot and damaged.
         '
     ];
 

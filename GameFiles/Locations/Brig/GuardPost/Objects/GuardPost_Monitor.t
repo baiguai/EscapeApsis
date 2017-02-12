@@ -1,16 +1,24 @@
 #include <adv3.h>
 #include <en_us.h>
 
-NAME:
+/*
+COMPUTER MONITOR
+--------------------------------------------------------------------------------
+This gives the player access to the ship's system, if the player has the guard's
+PComm.
+TODO: Code the doors that can be opened, or systems accessed via the computer.
+--------------------------------------------------------------------------------
+*/
+GuardPost_Monitor:
     Fixture
-    '' ''
+    'computer monitor' 'computer monitor'
 {
-    location = ;
-    label = '';
-    labelProper = '';
-    specialDescOrder = 1;
-    noun = '' '';
-    adjective = '' '';
+    location = GuardPost_Desk;
+    label = 'the computer monitor';
+    labelProper = 'The computer monitor';
+    specialDescOrder = 10;
+    noun = 'monitor' 'screen';
+    adjective = 'guard post' 'computer';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
@@ -23,21 +31,28 @@ NAME:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+Sitting on the desk is a computer monitor.
         '
     ];
 
     msgDmg = [
         '
+Sitting on the desk is a computer monitor.
+It has been shot and destroyed.
+Its shattered screen is blank.
         '
     ];
 
     ex = [
         '
+You examine the computer monitor.
         '
     ];
 
     exDmg = [
         '
+You examine the computer monitor.
+It has been shot and destroyed.
         '
     ];
 

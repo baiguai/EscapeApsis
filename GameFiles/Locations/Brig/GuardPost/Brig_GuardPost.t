@@ -45,11 +45,6 @@ Pale flourescent light from above fills the guard post.
 >>
 It is a cramped square shaped room.
 \n
-In the forward starboard section of the guard post is a desk.
-Sitting on the desk is a computer monitor.
-Positioned behind the desk is a tall-backed black leather chair.
-In the aft starboard corner of the room is another chair.
-Along the aft wall is a filing cabinet.
 At the port side of the cabinet is a large closet.
 In the port wall is the door leading back to the main brig area.
 Forward of the door is a camera mounted into the ceiling.

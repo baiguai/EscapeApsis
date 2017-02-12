@@ -1,16 +1,16 @@
 #include <adv3.h>
 #include <en_us.h>
 
-NAME:
+GuardPost_Desk:
     Fixture
-    '' ''
+    'desk' 'desk'
 {
-    location = ;
-    label = '';
-    labelProper = '';
+    location = Brig_GuardPost;
+    label = 'the desk';
+    labelProper = 'The desk';
     specialDescOrder = 1;
-    noun = '' '';
-    adjective = '' '';
+    noun = 'desk';
+    adjective = 'guard post' 'forward starboard';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
@@ -23,21 +23,29 @@ NAME:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+In the forward starboard section of the guard post is a desk.
         '
     ];
 
     msgDmg = [
         '
+In the forward starboard section of the guard post is a desk.
+It has been shot and damaged.
         '
     ];
 
     ex = [
         '
+You examine the guard post desk.
+It is made of rough steel plates.
         '
     ];
 
     exDmg = [
         '
+You examine the guard post desk.
+It is made of rough steel plates.
+It has been shot and damaged.
         '
     ];
 
