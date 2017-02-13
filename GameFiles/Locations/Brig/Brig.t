@@ -67,9 +67,6 @@ The entrance to the gard post is in its port wall, nearest the brig's entrance.
 A closet is set into the aft starboard corner and a small holding cell is located
 in the forward port corner.
 \n
-In the center of the brig is a small kitchen unit and a mess table that are
-used by the guards as they work long shifts.
-\n
 In the aft port corner, mounted on the ceiling is a camera.
 In the aft starboard corner, mounted on the ceiling is a camera.
 \n
@@ -118,8 +115,8 @@ scanner.
 
 
 // --[DOORS]--------------------------------------------------------------------
-Brig_Door:
-    LockableWithKey, Door
+Brig_Door_Inside:
+    LockableWithKey, Door -> Brig_Door
     'brig door' 'brig door'
 {
     location = Brig;

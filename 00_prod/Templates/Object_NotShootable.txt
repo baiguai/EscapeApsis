@@ -3,9 +3,10 @@
 
 NAME:
     Fixture
-    ''
+    '' ''
 {
     location = ;
+    specialDescOrder = 1;
     noun = '' '';
     adjective = '' '';
     isDyst = nil;

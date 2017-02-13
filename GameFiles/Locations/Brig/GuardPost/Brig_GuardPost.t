@@ -18,7 +18,8 @@ Brig_GuardPost:
     ];
 
     nav = [
-        'enter guard door: Exit guard post'
+        'enter guard door: Exit guard post.',
+        'enter closet: Enter the closet.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -62,4 +63,12 @@ Brig_GuardPost_Door_Inside:
 {
     location = Brig_GuardPost;
 }
+
+Brig_GuardPost_Closet_Door:
+    Door
+    'closet door' 'closet door'
+{
+    location = Brig_GuardPost;
+    isOpen = true;
+};
 // -----------------------------------------------------------------------------

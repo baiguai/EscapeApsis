@@ -69,13 +69,11 @@ gameMain: GameMainDef
 
             if (k == '') // Just to avoid a Warning
             {}
-            /*
-            if (k == 'tech')
+            if (k == 'gp')
             {
                 cls();
-                me.moveInto(TechCenter);
+                me.moveInto(Brig_GuardPost);
             }
-            */
         }
         // ---------------------------------------------------------------------
 

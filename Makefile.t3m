@@ -31,6 +31,9 @@ GameFiles/Characters/Lib_Characters.tl
 # ENEMIES
 GameFiles/Enemies/Lib_Enemies.tl
 
+# SPAWNERS
+GameFiles/Spawners/Lib_Spawners.tl
+
 
 # LOCATIONS
 GameFiles/Locations/Limbo.t
@@ -43,3 +46,4 @@ GameFiles/Locations/Brig/Cell03/Lib_Brig_Cell03.tl
 GameFiles/Locations/Brig/Cell04/Lib_Brig_Cell04.tl
 GameFiles/Locations/Brig/HoldingCell/Lib_Brig_HoldingCell.tl
 GameFiles/Locations/Brig/GuardPost/Lib_Brig_GuardPost.tl
+GameFiles/Locations/Brig/Hall/Lib_Brig_Hall.tl

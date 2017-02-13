@@ -2,7 +2,7 @@
 #include <en_us.h>
 
 GuardPost_Cabinet:
-    Fixture
+    Heavy, Container
     'cabinet' 'cabinet'
 {
     location = Brig_GuardPost;
@@ -63,6 +63,24 @@ It has been shot and damaged.
 
 
 // --[EVENTS]-------------------------------------------------------------------
+    dobjFor(LookIn)
+    {
+        action()
+        {
+            if (GuardPost_Cabinet_Uniform.location == GuardPost_Cabinet)
+            {
+                "
+You see a uniform sitting on one of the shelves inside the
+cabinet.
+                ";
+            }
+
+            "
+There are random office supplies and other mundane items stacked on the
+cabinet\'s shelves.
+            ";
+        };
+    };
     dobjFor(Examine)
     {
         action()

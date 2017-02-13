@@ -412,4 +412,14 @@ SpawnGuard(location, guardName)
 
     return guard;
 };
+
+// Spawners
+Spawner_Guard(location)
+{
+    local spawner = new Spawn_Guard;
+
+    spawner.moveInto(location);
+
+    return spawner;
+};
 // -----------------------------------------------------------------------------
