@@ -78,13 +78,6 @@ It has been shot and destroyed. It is no longer functional.
 // --[EVENTS]-------------------------------------------------------------------
     dobjFor(Examine)
     {
-        action()
-        {
-            if (damageType == 'smallShot')
-            {
-                Ex_Shootable(self);
-            }
-        };
     };
     dobjFor(Shoot)
     {

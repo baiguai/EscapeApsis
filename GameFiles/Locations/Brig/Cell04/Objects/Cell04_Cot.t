@@ -81,10 +81,7 @@ Multiple shots have been fired into the mattress.
     {
         action()
         {
-            if (damageType == 'smallShot')
-            {
-                Ex_Shootable(self);
-            }
+            Ex_Shootable(self);
         };
     };
     dobjFor(Shoot)

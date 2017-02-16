@@ -8,6 +8,7 @@ Brig_GuardPost:
     visitCount = 0;
     descCount = 0;
     hasSpawned = nil;
+    camera = nil;
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -29,7 +30,7 @@ Brig_GuardPost:
     {
         if (hasSpawned == nil)
         {
-            SpawnCamera01(Brig_GuardPost, 'camera', '');
+            camera = SpawnCamera01(Brig_GuardPost, 'camera', '');
             hasSpawned = true;
         }
 
@@ -48,12 +49,23 @@ It is a cramped square shaped room.
 \n
 At the port side of the cabinet is a large closet.
 In the port wall is the door leading back to the main brig area.
-Forward of the door is a camera mounted into the ceiling.
+\n
+<<camera.shotCount < 1 ?
+'Forward of the door is a camera mounted into the ceiling.'
+:
+'Forward of the door is a camera mounted into the ceiling.
+ It has been shot and destroyed.'
+>>
 \b\b
         ";
     };
 // -----------------------------------------------------------------------------
+
+// --[HELPER METHODS]-----------------------------------------------------------
+    CameraCheck()
+    {}
 };
+// -----------------------------------------------------------------------------
 
 
 // --[DOORS]--------------------------------------------------------------------

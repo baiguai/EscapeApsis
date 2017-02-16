@@ -83,22 +83,23 @@ gameMain: GameMainDef
             \b\b
             You are the infamous pirate Stalinis Maxuel.
             Your lucrative interstellar career has come to an end.
-            Off the rings of Saturn you were taken prisoner aboard the military
+            Just off Saturn you were taken prisoner aboard the military
             vessel Apsis.
             \n
             You are being held in the brig.
             \n
-            While breaking free of Saturn space the ship inadvertently skimmed
-            the rings and was struck by debris damaging its shields and
-            navigation system. The resulting momentary power outage disabled
-            your restraints long enough for you to break free just as a
-            guard was bringing your supper.
+            While the ship was breaking free of Saturn space it inadvertently
+            skimmed her rings and was struck by debris damaging its shields and
+            navigation system. The resulting momentary system surge and power
+            outage disabled your restraints long enough for you to break free
+            just as a guard was bringing your supper.
             \n
             You managed to kill the guard with your bare hands.
             \n
             If you can get to the bridge, you can take the Apsis.
-            You know that the brig is somewhere in the ship's aft, and assume
-            its door is forward, so your cell's door is in the port wall.
+            You know that you are being held somewhere in the ship's aft, and
+            assume the brig's door is forward, so your cell's door is in the
+            port wall.
             \b\b
 
             [Goal: <<gameMain.CurrentGoal>>]

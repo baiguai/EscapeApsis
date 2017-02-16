@@ -37,9 +37,9 @@ Brig:
     {
         if (hasSpawned == nil)
         {
-            camera01 = SpawnCamera01(Brig, 'forward', 'camera');
-            //camera02 = SpawnCamera01(Brig, 'camera aft port');
-            //camera02 = SpawnCamera01(Brig, 'camera aft starboard');
+            camera01 = SpawnCamera01(Brig, 'camera', ['forward','port']);
+            camera02 = SpawnCamera01(Brig, 'camera', ['aft','port']);
+            camera03 = SpawnCamera01(Brig, 'camera', ['aft','starboard']);
             hasSpawned = true;
         }
 
@@ -50,8 +50,8 @@ The brig is dingy and dim.
 <<Ship.PowerGeneratorOn == nil ?
 '
 Red auxiliary lights glow dimly in the corners of the main room.
-It appears that the power generator is still out.
-' :
+It appears that the power generator is still out.'
+:
 '
 It is lit only by a couple of flickering flourescent tubes overhead.
 '
@@ -66,10 +66,28 @@ The entrance to the gard post is in its port wall, nearest the brig's entrance.
 \n
 A closet is set into the aft starboard corner and a small holding cell is located
 in the forward port corner.
+\b
+<<camera01.shotCount < 1 ?
+'In the forward port corner, mounted on the ceiling is a camera.'
+:
+'In the forward port corner, mounted on the ceiling is a camera.
+ It has been shot and destroyed.'
+>>
 \n
-In the aft port corner, mounted on the ceiling is a camera.
-In the aft starboard corner, mounted on the ceiling is a camera.
+<<camera02.shotCount < 1 ?
+'In the aft port corner, mounted on the ceiling is a camera.'
+:
+'In the aft port corner, mounted on the ceiling is a camera.
+ It has been shot and destroyed.'
+>>
 \n
+<<camera03.shotCount < 1 ?
+'In the aft starboard corner, mounted on the ceiling is a camera.'
+:
+'In the aft starboard corner, mounted on the ceiling is a camera.
+ It has been shot and destroyed.'
+>>
+\b
 All the cameras are networked to the guard post. You
 can see the armored conduit running from each camera back to the guard post
 enclosure.
@@ -95,6 +113,8 @@ scanner.
 // --[HELPER METHODS]-----------------------------------------------------------
     CameraCheck()
     {
+        "Camera check!!";
+
         if (camera01.shotCount > 0 &&
             camera02.shotCount > 0 &&
             camera03.shotCount > 0)
@@ -110,6 +130,20 @@ scanner.
         {
         }
     };
+
+    AllCamerasDisabled()
+    {
+        if (camera01.shotCount < 1 ||
+            camera02.shotCount < 1 ||
+            camera03.shotCount < 1)
+        {
+            return nil;
+        }
+        else
+        {
+            return true;
+        }
+    };
 // -----------------------------------------------------------------------------
 };
 
@@ -121,6 +155,28 @@ Brig_Door_Inside:
 {
     location = Brig;
     keyList = [Brig_Guard_PComm];
+
+    dobjFor(UnlockWith)
+    {
+        check()
+        {
+            if(Brig.AllCamerasDisabled() == nil)
+            {
+                failCheck('The partially disabled security system prevents
+                    the door from unlocking.');
+            }
+        } 
+        action()
+        {
+            if (gameMain.CurrentGoal == 'Disable the cameras before the power is restored.')
+            {
+                Achieve_DisableBrigCameras.awardPointsOnce();
+                gameMain.CurrentGoal = 'Sneak into the hold.';
+                ShowGoal();
+            }
+            inherited;
+        }
+    }
 };
 Brig_HoldingCell_Door:
     LockableWithKey, Door

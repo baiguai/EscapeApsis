@@ -73,10 +73,7 @@ It has been shot and damaged.
     {
         action()
         {
-            if (damageType == 'smallShot')
-            {
-                Ex_Shootable(self);
-            }
+            Ex_Shootable(self);
         };
     };
     dobjFor(Shoot)
