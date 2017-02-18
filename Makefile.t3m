@@ -47,3 +47,8 @@ GameFiles/Locations/Brig/Cell04/Lib_Brig_Cell04.tl
 GameFiles/Locations/Brig/HoldingCell/Lib_Brig_HoldingCell.tl
 GameFiles/Locations/Brig/GuardPost/Lib_Brig_GuardPost.tl
 GameFiles/Locations/Brig/Hall/Lib_Brig_Hall.tl
+
+# MUNDANE HOLD
+GameFiles/Locations/Mundane_Hold_Access/Lib_Mundane_Hold_Access.tl
+GameFiles/Locations/Mundane_Hold_Port/Lib_Mundane_Hold_Port.tl
+GameFiles/Locations/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboard.tl

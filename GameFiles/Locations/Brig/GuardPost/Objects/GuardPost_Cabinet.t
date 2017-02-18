@@ -36,7 +36,8 @@ It has been shot and damaged.
 
     ex = [
         '
-You examine the filing cabinet.
+You examine the filing cabinet. You see shelves inside. To look inside the
+cabinet use \'look in cabinet\'.
         '
     ];
 

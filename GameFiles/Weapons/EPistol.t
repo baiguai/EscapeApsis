@@ -55,7 +55,9 @@ Near the back of the pistol is a small charge indicator.
 
             if (gameMain.CurrentGoal == 'Arm yourself')
             {
+                "\bYou have armed yourself.\b";
                 Achieve_ArmYourself.awardPointsOnce();
+                Achieve_ArmYourself.achieved = true;
                 gameMain.CurrentGoal = 'Disable the cameras before the power is restored.';
                 ShowGoal();
             }

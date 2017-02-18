@@ -31,7 +31,8 @@ In the forward wall is another door.
     ];
 
     nav = [
-        ''
+        'enter forward door: Enter the forward wall door.',
+        'enter brig door: Enter the brig.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -55,5 +56,11 @@ Brig_Door:
 {
     location = Brig_Hall;
     keyList = [Brig_Guard_PComm];
+};
+Mundane_Hold_Access_Door:
+    Door
+    'forward door' 'forward door'
+{
+    location = Brig_Hall;
 };
 // -----------------------------------------------------------------------------

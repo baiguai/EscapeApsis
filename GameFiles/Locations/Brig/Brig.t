@@ -168,10 +168,20 @@ Brig_Door_Inside:
         } 
         action()
         {
-            if (gameMain.CurrentGoal == 'Disable the cameras before the power is restored.')
+            if (Achieve_DisableBrigCameras.achieved == nil)
             {
+                "\bYou have disabled the cameras.\b";
                 Achieve_DisableBrigCameras.awardPointsOnce();
-                gameMain.CurrentGoal = 'Sneak into the hold.';
+                Achieve_DisableBrigCameras.achieved = true;
+
+                if (Achieve_FindDisguise.achieved == true)
+                {
+                    gameMain.CurrentGoal = 'Sneak into the hold for supplies.';
+                }
+                else
+                {
+                    gameMain.CurrentGoal = 'Find a disguise.';
+                }
                 ShowGoal();
             }
             inherited;
@@ -226,5 +236,30 @@ Brig_GuardPost_Door:
 {
     location = Brig;
     keyList = [Brig_Guard_PComm];
+
+    dobjFor(UnlockWith)
+    {
+        action()
+        {
+            if (Achieve_DisableBrigCameras.achieved == nil &&
+                Brig.AllCamerasDisabled() == true)
+            {
+                "\bYou have disabled the cameras.\b";
+                Achieve_DisableBrigCameras.awardPointsOnce();
+                Achieve_DisableBrigCameras.achieved = true;
+
+                if (Achieve_FindDisguise.achieved == true)
+                {
+                    gameMain.CurrentGoal = 'Sneak into the hold for supplies.';
+                }
+                else
+                {
+                    gameMain.CurrentGoal = 'Find a disguise.';
+                }
+                ShowGoal();
+            }
+            inherited;
+        }
+    }
 }
 // -----------------------------------------------------------------------------

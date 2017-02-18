@@ -13,3 +13,9 @@ Achieve_DisableBrigCameras: Achievement {
     "You have successfully disabled the cameras."
     achieved = nil
 };
+
+Achieve_FindDisguise: Achievement {
+    +1
+    "You have found a disguise."
+    achieved = nil
+};
