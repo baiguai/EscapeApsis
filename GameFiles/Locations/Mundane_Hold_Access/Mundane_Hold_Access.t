@@ -53,19 +53,19 @@ the starboard section of the wall, and the door to the brig in the center.
 
 
 // --[DOORS]--------------------------------------------------------------------
-Mindane_Hole_Access_Forward_Door:
+Mindane_Hold_Access_Forward_Door:
     Door
     'forward door' 'forward door'
 {
     location = Mundane_Hold_Access;
 };
-Mindane_Hole_Access_Port_Door:
+Mindane_Hold_Access_Port_Door:
     Door
     'aft port door' 'aft port door'
 {
     location = Mundane_Hold_Access;
 };
-Mindane_Hole_Access_Starboard_Door:
+Mindane_Hold_Access_Starboard_Door:
     Door
     'aft starboard door' 'aft starboard door'
 {
