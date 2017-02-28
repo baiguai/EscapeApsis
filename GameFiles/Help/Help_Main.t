@@ -25,8 +25,15 @@ shoot Bob
 \b
 Fighting
 \n
-When you are fighting an enemy, you only have to say shoot. You cannot
-exit out of the fight until you, or the enemy, is dead.
+When you are fighting an enemy, you only have to say shoot.
+\b
+Fleeing a Fight
+\n
+You can flee from a fight by saying:
+\n
+run
+\n
+But this will cost you <<gameMain.retreatCost>> life points.
 \b
 If your weapon is an energy gun it must be charged between uses, otherwise
 it can run out of energy. Traveling to new locations will give it

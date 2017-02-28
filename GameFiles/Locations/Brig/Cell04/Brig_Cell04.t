@@ -40,6 +40,10 @@ cell.
 >>
 The rest of the cell is bare.
 In the port wall is the cell door.
+\b
+To examine an item or a person say: examine (or x) [item name]
+\n
+To attempt to take an item say: take [item name]
 \b\b
         ";
     };

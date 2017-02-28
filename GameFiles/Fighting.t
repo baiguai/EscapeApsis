@@ -32,8 +32,34 @@ FightTurn(obj)
 
     match = nil;
 
+    // Secret kill code
+    if (match == nil && Respond(match, inp, 'root@kill') == true)
+    {
+        match = true;
+        obj.life = 0;
+        FightTurn(obj);
+    }
+
+    // Run
+    if (match == nil && Respond(match, inp, 'run') == true)
+    {
+        match = true;
+        me.life = (me.life - gameMain.retreatCost);
+
+        if (me.life <= 0)
+        {
+            "
+\t
+<<finishGameMsg('You have been killed by <<obj.label>>.', [finishOptionUndo])>>
+\b\b
+            ";
+        }
+
+        return;
+    }
+
     // Shoot
-    if (Respond(match, inp, 'shoot') == true)
+    if (match == nil && Respond(match, inp, 'shoot') == true)
     {
         match = true;
         ShootGun(obj);

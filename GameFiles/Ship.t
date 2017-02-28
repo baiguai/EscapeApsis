@@ -24,11 +24,13 @@ Ship:
 
             if (gameMain.DEVMODE == true)
             {
+                /*
                 "
 Power Outage Stats:\n
 Downtime: <<PowerDownTime>>\n
-RepairTime: <<PowerRepairTime>>
+RepairTime: <<PowerRepairTime>>\n
                 ";
+                */
             }
 
             if (PowerDownTime >= PowerRepairTime)

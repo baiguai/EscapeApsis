@@ -61,15 +61,6 @@ It has been shot and destroyed. It is no longer functional.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     specialDesc()
     {
-        // If the generator is functional, check for guard spawn
-        if (shotCount < 1 && Ship.PowerGeneratorOn == true)
-        {
-            if (rand(100) > guardCheck)
-            {
-                SpawnGuard(self.location, 'guard');
-            }
-        }
-
         Desc_Shootable(self);
     };
 // -----------------------------------------------------------------------------

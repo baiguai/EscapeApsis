@@ -11,6 +11,7 @@ Brig:
     camera01 = nil;
     camera02 = nil;
     camera03 = nil;
+    guard01 = nil;
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -35,22 +36,36 @@ Brig:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        if (hasSpawned == nil)
+        if (self.hasSpawned == nil)
         {
-            camera01 = SpawnCamera01(Brig, 'camera', ['forward','port']);
-            camera02 = SpawnCamera01(Brig, 'camera', ['aft','port']);
-            camera03 = SpawnCamera01(Brig, 'camera', ['aft','starboard']);
-            hasSpawned = true;
+            camera01 = SpawnCamera01(Brig, 'forward port camera', ['forward','port']);
+            camera02 = SpawnCamera01(Brig, 'aft port camera', ['aft','port']);
+            camera03 = SpawnCamera01(Brig, 'aft starboard camera', ['aft','starboard']);
+            self.hasSpawned = true;
         }
 
         Desc_Location(self);
 
+        if (me.weapon != nil)
+        {
+            "To shoot an item or person say: shoot [item name]\n";
+        }
+        if (Brig_Guard_PComm.isHeldBy(me))
+        {
+            "To attempt to unlock a door say: unlock [door name] with [key name]\n";
+        }
+        if (!GuardPost_Cabinet_Uniform.isWornBy(me))
+        {
+            "To put an item on say: put on [item name]\n";
+        }
+
         "
+\b
 The brig is dingy and dim.
 <<Ship.PowerGeneratorOn == nil ?
 '
 Red auxiliary lights glow dimly in the corners of the main room.
-It appears that the power generator is still out.'
+'
 :
 '
 It is lit only by a couple of flickering flourescent tubes overhead.
@@ -97,14 +112,11 @@ scanner.
 \b\b
         ";
 
-        if (camera01.shotCount < 1 ||
-            camera02.shotCount < 1 ||
-            camera03.shotCount < 1)
+        if (guard01 == nil &&
+            !AllCamerasDisabled() &&
+            Ship.PowerGeneratorOn)
         {
-            if (Ship.PowerGeneratorOn == true)
-            {
-                SpawnGuard(me.location, 'guard');
-            }
+            guard01 = SpawnGuard(Brig, 'Guard01');
         }
     };
 // -----------------------------------------------------------------------------

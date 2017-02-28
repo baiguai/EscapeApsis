@@ -43,7 +43,7 @@ the starboard section of the wall, and the door to the brig in the center.
     desc()
     {
         // Add a guard spawner
-        Spawner_Guard(Brig_Hall);
+        // Spawner_Guard(Brig_Hall);
 
         Desc_Location(self);
     };

@@ -22,6 +22,8 @@ gameMain: GameMainDef
     CurrentGoal = 'Arm yourself';
     Notes = [ '' ];
 
+    // Time Handling
+    CurrentRuntime = 0;
     CurrentHour = 19;
     CurrentMinute = 00;
     CurrentDay = 1;
@@ -32,6 +34,7 @@ gameMain: GameMainDef
     lifeMin = 6;
     lifeMax = 24;
     chanceRand = 20;
+    retreatCost = 3;
 
     TravelingCharacters = [
     ];
@@ -73,6 +76,12 @@ gameMain: GameMainDef
             {
                 cls();
                 me.moveInto(Brig_GuardPost);
+            }
+            if (k == 'fight')
+            {
+                Brig_Guard_PComm.location = me;
+                EPistol.location = me;
+                me.weapon = EPistol;
             }
         }
         // ---------------------------------------------------------------------
@@ -128,6 +137,10 @@ me: Actor
         // travels
 
         inherited(origin, dest, backConnector);
+
+        // VisitAdjustment - Time.t
+        // TimePassage - Time.t
+        // WeaponChargeCheck - Fighting.t
 
         reportAfter('
             <<VisitAdjustment(dest)>>

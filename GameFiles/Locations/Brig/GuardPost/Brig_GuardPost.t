@@ -30,7 +30,7 @@ Brig_GuardPost:
     {
         if (hasSpawned == nil)
         {
-            camera = SpawnCamera01(Brig_GuardPost, 'camera', '');
+            camera = SpawnCamera01(Brig_GuardPost, 'forward camera', ['forward']);
             hasSpawned = true;
         }
 

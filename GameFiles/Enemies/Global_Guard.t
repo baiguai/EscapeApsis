@@ -28,7 +28,7 @@ Guard:
 
     // FIGHTING ATTRIBUTES
     isEnemy = true;
-    life = 0;
+    life = 2;
     lifeMin = 2;
     lifeMax = 1;
     initiative = 1;
@@ -37,6 +37,7 @@ Guard:
 
 // --[OUTPUTS]------------------------------------------------------------------
     message = '
+A guard appears and attacks you.
     ';
 
     deadMessage = "
@@ -53,10 +54,15 @@ A guard lies dead on the ground.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     specialDesc()
     {
-        Desc_Shootable(self);
-        if (life > 0)
+        // Desc_Shootable(self);
+        if (self.life > 0)
         {
+            "<<message>>";
             FightingMode(self);
+        }
+        else
+        {
+            "<<deadMessage>>";
         }
     };
     

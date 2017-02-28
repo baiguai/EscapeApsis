@@ -8,6 +8,8 @@ Brig_Hall:
     visitCount = 0;
     descCount = 0;
 
+    guard01 = nil;
+
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
 
@@ -40,8 +42,11 @@ In the forward wall is another door.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        // Add a guard spawner
-        Spawner_Guard(Brig_Hall);
+        if (Ship.PowerGeneratorOn &&
+            guard01 == nil)
+        {
+            guard01 = SpawnGuard(Brig_Hall, 'Guard01');
+        }
 
         Desc_Location(self);
     };

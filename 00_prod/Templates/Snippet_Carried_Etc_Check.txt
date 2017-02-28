@@ -1,0 +1,5 @@
+// WORN BY
+GuardPost_Cabinet_Uniform.isWornBy(me)
+
+// HELD BY
+Gun.isHeldBy(me)

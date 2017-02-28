@@ -141,7 +141,7 @@ foreach(local txt in lst)
 // --[NAVIGATION MESSAGE]-------------------------------------------------------
 Desc_Navigation(message)
 {
-    cls();
+    // cls();
     "
 \b
 <<message>>
@@ -216,6 +216,11 @@ Do_Desc_Shootable(calledCount, messages, shotCount, messagesDmg)
 
 Do_Enemy_Message(life, message, deadMessage)
 {
+    if (gameMain.DEVMODE == true)
+    {
+        // "\bLife: <<life>>\b";
+    }
+
     "
 \b
     ";
@@ -226,7 +231,8 @@ Do_Enemy_Message(life, message, deadMessage)
     }
     else
     {
-        "<<deadMessage>>";
+        "No life!";
+        // "<<deadMessage>>";
     }
 
 "

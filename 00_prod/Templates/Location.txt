@@ -7,6 +7,7 @@ NAME:
     roomName = "";
     visitCount = 0;
     descCount = 0;
+    hasSpawned = nil;
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -25,6 +26,12 @@ NAME:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        if (hasSpawned == nil)
+        {
+            // Perform any spawning
+            hasSpawned = true;
+        }
+
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
