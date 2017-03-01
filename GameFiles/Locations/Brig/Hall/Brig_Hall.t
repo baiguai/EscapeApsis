@@ -7,8 +7,14 @@ Brig_Hall:
     roomName = "hall";
     visitCount = 0;
     descCount = 0;
+    hasSpawned = nil;
 
-    guard01 = nil;
+    canSpawn = nil;
+    spawner_Guard = nil;
+
+    spawners = [
+        spawner_Guard
+    ];
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -42,13 +48,32 @@ In the forward wall is another door.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        if (Ship.PowerGeneratorOn &&
-            guard01 == nil)
+        if (Ship.PowerGeneratorOn)
         {
-            guard01 = SpawnGuard(Brig_Hall, 'Guard01');
+            canSpawn = true;
+        }
+        else
+        {
+            canSpawn = nil;
+        }
+
+        if (self.hasSpawned == nil)
+        {
+            spawner_Guard = new Spawner_Guard;
+            spawner_Guard.moveInto(Brig_Hall);
+
+            self.hasSpawned = true;
         }
 
         Desc_Location(self);
+
+        if (descCount < 2)
+        {
+            foreach (local s in spawners)
+            {
+                s.specialDesc();
+            }
+        }
     };
 // -----------------------------------------------------------------------------
 };

@@ -31,6 +31,9 @@ GameFiles/Characters/Lib_Characters.tl
 # ENEMIES
 GameFiles/Enemies/Lib_Enemies.tl
 
+# SPAWNERS
+GameFiles/Spawners/Lib_Spawners.tl
+
 
 # LOCATIONS
 GameFiles/Locations/Limbo.t

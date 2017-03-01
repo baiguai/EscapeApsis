@@ -11,7 +11,13 @@ Brig:
     camera01 = nil;
     camera02 = nil;
     camera03 = nil;
-    guard01 = nil;
+
+    canSpawn = nil;
+    spawner_Guard = nil;
+
+    spawners = [
+        spawner_Guard
+    ];
 
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
@@ -41,8 +47,14 @@ Brig:
             camera01 = SpawnCamera01(Brig, 'forward port camera', ['forward','port']);
             camera02 = SpawnCamera01(Brig, 'aft port camera', ['aft','port']);
             camera03 = SpawnCamera01(Brig, 'aft starboard camera', ['aft','starboard']);
+
+            spawner_Guard = new Spawner_Guard;
+            spawner_Guard.moveInto(Brig);
+
             self.hasSpawned = true;
         }
+
+        CameraCheck();
 
         Desc_Location(self);
 
@@ -112,11 +124,12 @@ scanner.
 \b\b
         ";
 
-        if (guard01 == nil &&
-            !AllCamerasDisabled() &&
-            Ship.PowerGeneratorOn)
+        if (descCount < 2)
         {
-            guard01 = SpawnGuard(Brig, 'Guard01');
+            foreach (local s in spawners)
+            {
+                s.specialDesc();
+            }
         }
     };
 // -----------------------------------------------------------------------------
@@ -131,7 +144,9 @@ scanner.
             camera02.shotCount > 0 &&
             camera03.shotCount > 0)
         {
-            if (gameMain.CurrentGoal == 'Disable the cameras before the power is restored.')
+            canSpawn = nil;
+
+            if (Achieve_DisableBrigCameras.achieved == nil)
             {
                 Achieve_DisableBrigCameras.awardPointsOnce();
                 gameMain.CurrentGoal = 'Escape the brig.';
@@ -140,6 +155,7 @@ scanner.
         }
         else
         {
+            canSpawn = true;
         }
     };
 
