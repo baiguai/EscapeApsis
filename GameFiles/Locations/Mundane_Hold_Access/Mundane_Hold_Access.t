@@ -25,7 +25,7 @@ Flourescent tubes flicker overhead.
 >>
 A door is set into the center of the forward wall.
 \n
-In the aft wall are three doors, on in the port section of the wall, one in
+In the aft wall are three doors, one in the port section of the wall, one in
 the starboard section of the wall, and the door to the brig in the center.
         '
     ];

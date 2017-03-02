@@ -93,11 +93,13 @@ gameMain: GameMainDef
             if (k == 'gp')
             {
                 cls();
+                me.weapon = EPistol;
                 me.moveInto(Brig_GuardPost);
             }
             if (k == 'bh')
             {
                 cls();
+                me.weapon = EPistol;
                 me.moveInto(Brig_Hall);
             }
         }

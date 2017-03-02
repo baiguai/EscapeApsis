@@ -9,13 +9,6 @@ NAME:
     descCount = 0;
     hasSpawned = nil;
 
-    canSpawn = nil;
-    spawner_Guard = nil;
-
-    spawners = [
-        spawner_Guard
-    ];
-
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
 
@@ -33,24 +26,7 @@ NAME:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        if (hasSpawned == nil)
-        {
-            // Perform any spawning
-            hasSpawned = true;
-
-            spawner_Guard = new Spawner_Guard;
-            spawner_Guard.moveInto(self.location);
-        }
-
         Desc_Location(self);
-
-        if (descCount < 2)
-        {
-            foreach (local s in spawners)
-            {
-                s.specialDesc();
-            }
-        }
     };
 // -----------------------------------------------------------------------------
 

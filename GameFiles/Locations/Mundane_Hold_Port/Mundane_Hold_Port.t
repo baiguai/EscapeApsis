@@ -19,7 +19,7 @@ It is vast and dim.
 In the thick shadows along the port and starboard walls you can make out the
 shadowy forms of shelves, rising up over 6 meters.
 \n
-Beyond the terminal are more shelves.
+Aft, in the shadows are more shelves.
         '
     ];
 
@@ -46,24 +46,24 @@ Beyond the terminal are more shelves.
         {
             Desc_Navigation('You approach the starboard side shelves.');
         };
-        room1 = Mundane_Hole_Port;
-        room2 = Mundane_Hole_Port;
+        room1 = Mundane_Hold_Port;
+        room2 = Mundane_Hold_Port_ForwardStarboardShelves;
     };
     aft: TravelWithMessage, RoomConnector {
         travelDesc()
         {
             Desc_Navigation('You approach the aft shelves.');
         };
-        room1 = Mundane_Hole_Port;
-        room2 = Mundane_Hole_Port;
+        room1 = Mundane_Hold_Port;
+        room2 = Mundane_Hold_Port_Aft;
     };
     port: TravelWithMessage, RoomConnector {
         travelDesc()
         {
             Desc_Navigation('You approach the port side shelves.');
         };
-        room1 = Mundane_Hole_Port;
-        room2 = Mundane_Hole_Port;
+        room1 = Mundane_Hold_Port;
+        room2 = Mundane_Hold_Port_ForwardPortShelves;
     };
 // -----------------------------------------------------------------------------
 };

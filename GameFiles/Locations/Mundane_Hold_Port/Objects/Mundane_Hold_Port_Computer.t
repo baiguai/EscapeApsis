@@ -9,8 +9,8 @@ Mundane_Hold_Port_Computer:
     label = 'the computer terminal';
     labelProper = 'The computer terminal';
     specialDescOrder = 1;
-    noun = 'computer terminal';
-    adjective = '';
+    noun = 'computer' 'terminal' 'screen';
+    adjective = 'computer';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
