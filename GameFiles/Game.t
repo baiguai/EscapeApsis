@@ -23,7 +23,25 @@ gameMain: GameMainDef
     Notes = [ '' ];
 
     // Time Handling
+
+    /*
+        Abstract time passage, used by game components.
+        Back end time.
+        Every time the player issues a command the task
+        interval increases. When it reaches the task
+        interval the run time increases by 1 and the 
+        task time is zero'd out.
+
+    */
     CurrentRuntime = 0;
+    CurrentTasktime = 0;
+    TaskInterval = 5;
+
+    /*
+        Real time passage. This is game facing time.
+        Every time the player travels time minutes increase
+        by the passage interval.
+    */
     CurrentHour = 19;
     CurrentMinute = 00;
     CurrentDay = 1;
@@ -77,11 +95,10 @@ gameMain: GameMainDef
                 cls();
                 me.moveInto(Brig_GuardPost);
             }
-            if (k == 'fight')
+            if (k == 'bh')
             {
-                Brig_Guard_PComm.location = me;
-                EPistol.location = me;
-                me.weapon = EPistol;
+                cls();
+                me.moveInto(Brig_Hall);
             }
         }
         // ---------------------------------------------------------------------
@@ -142,11 +159,32 @@ me: Actor
         // TimePassage - Time.t
         // WeaponChargeCheck - Fighting.t
 
+        "<<TimePassage(gameMain.PassageInterval)>>";
+
         reportAfter('
             <<VisitAdjustment(dest)>>
             <<WeaponChargeCheck()>>
-            <<TimePassage(gameMain.PassageInterval)>>
             <<Ship.StateUpdate()>>
         '); // after room description
+    };
+
+    // Commands such as examine issued
+    nonIdleTurn()
+    {
+        "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
+        "Run Time: <<gameMain.CurrentRuntime>>\b\b";
+        "
+            <<TaskPassage(1)>>
+        ";
+    };
+
+    // Non-commands such as look issued
+    noteConditionAfter()
+    {
+        "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
+        "Run Time: <<gameMain.CurrentRuntime>>\b\b";
+        "
+            <<TaskPassage(1)>>
+        ";
     };
 };

@@ -73,8 +73,8 @@ Mindane_Hold_Access_Starboard_Door:
 };
 Mundane_Hold_Access_Door_Inside:
     Door -> Mundane_Hold_Access_Door
-    'forward door' 'forward door'
+    'brig door' 'brig door'
 {
-    location = Brig_Hall;
+    location = Mundane_Hold_Access;
 };
 // -----------------------------------------------------------------------------

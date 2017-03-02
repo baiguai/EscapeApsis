@@ -32,6 +32,17 @@ TimePassage(interval)
         */
     }
 };
+
+TaskPassage(interval)
+{
+    gameMain.CurrentTasktime += interval;
+
+    if (gameMain.CurrentTasktime >= gameMain.TaskInterval)
+    {
+        gameMain.CurrentRuntime += 1;
+        gameMain.CurrentTasktime = 0;
+    }
+};
 // -----------------------------------------------------------------------------
 
 

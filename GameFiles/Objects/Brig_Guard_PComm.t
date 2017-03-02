@@ -13,7 +13,7 @@ Brig_Guard_PComm:
     Key
     'pcomm' 'PComm'
 {
-    location = Brig_Guard;
+    location = me //Brig_Guard;
     noun = 'PComm';
     adjective = '';
     isDyst = nil;

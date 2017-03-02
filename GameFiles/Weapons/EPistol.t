@@ -10,7 +10,7 @@ Level 1 weapon. The player will NEED to pick this up to progress successfully.
 EPistol: Thing
 'Energy Pistol' 'energy pistol'
 {
-    location = Brig_Guard; // UtopiaRingCity_TechCenter_West_Car
+    location = me; //Brig_Guard;
     label = 'the energy pistol';
     labelGen = 'the pistol';
     labelProper = 'The energy pistol';
