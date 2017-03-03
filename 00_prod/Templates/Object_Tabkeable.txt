@@ -3,7 +3,7 @@
 
 NAME:
     Thing
-    ''
+    '' ''
 {
     location = ;
     noun = '';

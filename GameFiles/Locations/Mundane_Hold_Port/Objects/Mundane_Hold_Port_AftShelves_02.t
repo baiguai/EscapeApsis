@@ -24,11 +24,25 @@ Mundane_Hold_Port_Aft_Shelves_02:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+The row of shelves aft of that appear to be lined with cleaning supplies.
+Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
+disinfectants have been arranged along the middle shelves and gloves and
+other cleaning supplies have been arranged along the upper shelves.
+        ',
+        '
+The row of shelves aft of that are lined with cleaning supplies.
+Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
+disinfectants have been arranged along the middle shelves and gloves and
+other cleaning supplies have been arranged along the upper shelves.
         '
     ];
 
     msgDmg = [
         '
+The row of shelves aft of that are lined with cleaning supplies.
+Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
+disinfectants have been arranged along the middle shelves and gloves and
+other cleaning supplies have been arranged along the upper shelves.
 \n
 The shelves have been shot and damaged.
         '
@@ -36,11 +50,21 @@ The shelves have been shot and damaged.
 
     ex = [
         '
+You examine the second set of aft shelves.
+They are lined with cleaning supplies.
+Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
+disinfectants have been arranged along the middle shelves and gloves and
+other cleaning supplies have been arranged along the upper shelves.
         '
     ];
 
     exDmg = [
         '
+You examine the second set of aft shelves.
+They are lined with cleaning supplies.
+Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
+disinfectants have been arranged along the middle shelves and gloves and
+other cleaning supplies have been arranged along the upper shelves.
 \n
 The shelves have been shot and damaged.
         '

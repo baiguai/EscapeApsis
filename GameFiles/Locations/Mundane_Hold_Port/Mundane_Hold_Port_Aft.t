@@ -24,21 +24,16 @@ Mundane_Hold_Port_Aft:
 The aft section is filled with narrow shelves. You can see four rows of them,
 each aft of the previous.
 \n
-The row of shelves aft of that appear to be lined with cleaning supplies.
-Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
-disinfectants have been arranged along the middle shelves and gloves and
-other cleaning supplies have been arranged along the upper shelves.
+Along the port and starboard walls are towering shelves that reach up into the
+shadows far above.
 \n
-The row aft of that is filled with various power supplies and batteries of
-every size and type.
-\n
-Beyond that row, the final section of shelves are filled with miscellaneous
-items.
         '
     ];
 
     nav = [
-        'forward: Back to the central section of the hold'
+        'forward: Back to the central section of the hold.',
+        'starboard: Approach the starboard wall shelves.',
+        'port: Approach the port wall shelves.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -81,10 +76,26 @@ items.
     forward: TravelWithMessage, RoomConnector {
         travelDesc()
         {
-            Desc_Navigation('');
+            Desc_Navigation('You return to the central section of the hold.');
         };
         room1 = Mundane_Hold_Port_Aft;
         room2 = Mundane_Hold_Port;
+    };
+    starboard: TravelWithMessage, RoomConnector {
+        travelDesc()
+        {
+            Desc_Navigation('You approach the starboard wall shelves.');
+        };
+        room1 = Mundane_Hold_Port_Aft;
+        room2 = Mundane_Hold_Port_AftStarboardShelves;
+    };
+    port: TravelWithMessage, RoomConnector {
+        travelDesc()
+        {
+            Desc_Navigation('You approach the port wall shelves.');
+        };
+        room1 = Mundane_Hold_Port_Aft;
+        room2 = Mundane_Hold_Port_AftPortShelves;
     };
 // -----------------------------------------------------------------------------
 };
