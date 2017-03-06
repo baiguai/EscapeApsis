@@ -24,7 +24,7 @@ Mundane_Hold_Port_Aft_Shelves_02:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The row of shelves aft of that appear to be lined with cleaning supplies.
+The row of shelves aft of that (shelves 2) appear to be lined with cleaning supplies.
 Brooms and mops lay neatly along the lower shelves. Jugs of soaps and
 disinfectants have been arranged along the middle shelves and gloves and
 other cleaning supplies have been arranged along the upper shelves.

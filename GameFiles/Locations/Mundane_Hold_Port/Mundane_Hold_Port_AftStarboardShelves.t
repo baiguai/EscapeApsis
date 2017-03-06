@@ -48,7 +48,7 @@ Mundane_Hold_Port_AftStarboardShelves:
 // --[DOORS]--------------------------------------------------------------------
 Mundane_Hold_Port_AirShaft:
     HiddenDoor
-    'ventilation shaft' 'ventilation shaft'
+    'vent' 'vent'
 {
     isOpen = true;
     location = Mundane_Hold_Port_AftStarboardShelves;

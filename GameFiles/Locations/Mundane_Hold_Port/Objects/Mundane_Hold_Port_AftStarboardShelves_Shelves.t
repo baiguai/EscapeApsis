@@ -84,7 +84,11 @@ The shelves have been shot and damaged.
     {
         action()
         {
-            "You discover an open ventilation shaft.";
+            "
+You look behind the shelves. There is just enough room for you to squeeze
+into the space between the shelves and the wall. Just above the floor you
+see a large metal vent cover. It appears to have been dislodged by something.
+            ";
             discover(Mundane_Hold_Port_AirShaft);
         }
     }

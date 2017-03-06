@@ -24,7 +24,7 @@ Mundane_Hold_Port_Aft_Shelves_01:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The most forward of the shelves is filled with office supplies. You see
+The most forward of the shelves (shelves 1) is filled with office supplies. You see
 antiquated pads of paper and writing utensils as well as other miscellaneous
 supplies.
         '

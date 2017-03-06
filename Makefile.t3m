@@ -52,3 +52,6 @@ GameFiles/Locations/Brig/Hall/Lib_Brig_Hall.tl
 GameFiles/Locations/Mundane_Hold_Access/Lib_Mundane_Hold_Access.tl
 GameFiles/Locations/Mundane_Hold_Port/Lib_Mundane_Hold_Port.tl
 GameFiles/Locations/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboard.tl
+
+# VENTILATION AFT
+GameFiles/Locations/Ventilation_Aft/Lib_Ventilation_Aft.tl

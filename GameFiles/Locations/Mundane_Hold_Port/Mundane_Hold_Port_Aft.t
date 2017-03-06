@@ -31,7 +31,7 @@ shadows far above.
     ];
 
     nav = [
-        'forward: Back to the central section of the hold.',
+        'fore: Back to the central section of the hold.',
         'starboard: Approach the starboard wall shelves.',
         'port: Approach the port wall shelves.'
     ];
@@ -73,7 +73,7 @@ shadows far above.
 
 
 // --[NAVIGATION]---------------------------------------------------------------
-    forward: TravelWithMessage, RoomConnector {
+    fore: TravelWithMessage, RoomConnector {
         travelDesc()
         {
             Desc_Navigation('You return to the central section of the hold.');

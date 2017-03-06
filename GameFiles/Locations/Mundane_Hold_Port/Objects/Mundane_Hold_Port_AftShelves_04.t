@@ -24,7 +24,7 @@ Mundane_Hold_Port_Aft_Shelves_04:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Beyond that row, the final section of shelves are filled with miscellaneous
+Beyond that row, the final section of shelves (shelves 4) are filled with miscellaneous
 items.
         '
     ];

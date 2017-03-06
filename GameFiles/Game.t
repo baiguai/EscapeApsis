@@ -96,6 +96,12 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Brig_GuardPost);
             }
+            if (k == 'hold')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Mundane_Hold_Port);
+            }
             if (k == 'bh')
             {
                 cls();

@@ -27,8 +27,10 @@ Mundane_Hold_Port_AftPortShelves_Shelves:
 The towering shelves along the port wall reach up into the shadows.
 They are filled with various computer components.
 \n
-Most of the pieces appear to be useless on their own.
-\n
+The bottom shelf is filled with boxes of random tools. You see hammers,
+screwdrivers, welders, and soldering guns.
+Near the saw is a flashlight.
+Folded in another box are rags
         '
     ];
 

@@ -18,3 +18,6 @@ source: Objects/Mundane_Hold_Port_AftShelves_01.t
 source: Objects/Mundane_Hold_Port_AftShelves_02.t
 source: Objects/Mundane_Hold_Port_AftShelves_03.t
 source: Objects/Mundane_Hold_Port_IOComponent.t
+source: Objects/Mundane_Hold_Port_MaintComm.t
+source: Objects/Mundane_Hold_Port_Handsaw.t
+source: Objects/Mundane_Hold_Port_Flashlight.t

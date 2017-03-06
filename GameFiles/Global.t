@@ -294,6 +294,15 @@ dobjFor(Shoot)
 
 
 // --[SPAWNING ITEMS]-----------------------------------------------------------
+SpawnBattery(location, battName)
+{
+    local battery = new Battery;
+    battery.name = battName;
+    cmdDict.addWord(battery, battName, &noun);
+    battery.moveInto(location);
+
+    return battery;
+};
 SpawnMedCapsule(location, medName)
 {
     local capsule = new MedCapsule;
