@@ -1,7 +1,7 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe:
+Vent_Aft_MainPipe_PortFanVent:
     DarkRoom
 {
     roomName = "Ventilation Pipe";
@@ -14,17 +14,18 @@ Vent_Aft_MainPipe:
 
     msg = [
         '
-The aft section of the main aft ventilation pipe is a large tube running forward and aft through
-the ship. You find it uncomfortable to breathe in the hot pipe. The vent
-continues forward into utter darkness.
+The port side vent pipe is cramped and hot.
+Air blows through the pipe.
 \n
-Branching off to the port is a varrow short pipe back to the Port side hold.
+At the port end is a vent opening with a metal grate covering it.
+\n
+At the starboard end it enters into a larger vent pipe.
         '
     ];
 
     nav = [
-        'fore: Travel forward through the main vent pipe.',
-        'port: Enter the narrow pipe toward the hold.'
+        'starboard: Travel into the main ventilation pipe.',
+        'enter vent: Exit the cramped vent pipe.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -38,22 +39,27 @@ Branching off to the port is a varrow short pipe back to the Port side hold.
 
 
 // --[NAVIGATION]---------------------------------------------------------------
-    fore: TravelWithMessage, RoomConnector {
+    starboard: TravelWithMessage, RoomConnector {
         travelDesc()
         {
-            Desc_Navigation('You crawl forward through the main vent pipe.');
+            Desc_Navigation('You travel starboard into the main ventilation
+                pipe.');
         };
-        room1 = Vent_Aft_MainPipe;
+        room1 = Vent_Aft_MainPipe_PortFanVent;
         room2 = Vent_Aft_MainPipe_Forward;
-    };
-    port: TravelWithMessage, RoomConnector {
-        travelDesc()
-        {
-            Desc_Navigation('You crawl into the cramped pipe branching off to
-                port.');
-        };
-        room1 = Vent_Aft_MainPipe;
-        room2 = Vent_Aft_PortHoldVent;
     };
 // -----------------------------------------------------------------------------
 };
+
+
+
+
+// --[DOORS]--------------------------------------------------------------------
+Vent_Aft_MainPipe_PortFanVent_Opening:
+    HiddenDoor
+    'vent' 'vent'
+{
+    isOpen = true;
+    location = Vent_Aft_MainPipe_PortFanVent;
+};
+// -----------------------------------------------------------------------------

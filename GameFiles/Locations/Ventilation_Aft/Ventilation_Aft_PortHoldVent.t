@@ -22,7 +22,7 @@ enclosed spaces, you feel claustrophobic and panicky.
     ];
 
     nav = [
-        'port: Exit to the hold.',
+        'enter vent: Exit to the hold.',
         'starboard: Enter the main ventilation pipe.'
     ];
 // -----------------------------------------------------------------------------

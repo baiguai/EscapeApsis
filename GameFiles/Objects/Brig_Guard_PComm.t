@@ -13,7 +13,7 @@ Brig_Guard_PComm:
     Key
     'pcomm' 'PComm'
 {
-    location = me //Brig_Guard;
+    location = gameMain.DEVMODE ? me : Brig_Guard;
     noun = 'PComm';
     adjective = '';
     isDyst = nil;

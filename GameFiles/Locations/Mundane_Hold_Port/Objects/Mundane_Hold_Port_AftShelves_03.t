@@ -67,7 +67,7 @@ The shelves have been shot and damaged.
     {
         if (hasSpawned == nil)
         {
-            battery01 = SpawnBattery(Mundane_Hold_Port_Aft_Shelves_03, 'battery');
+            battery01 = SpawnBattery(gameMain.DEVMODE ? me : Mundane_Hold_Port_Aft_Shelves_03, 'battery');
 
             hasSpawned = true;
         }

@@ -1,16 +1,16 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Mundane_Hold_Port_Flashlight:
-    Flashlight, FueledLightSource, OpenableContainer
-    'flashlight' 'Flashlight'
+Vent_Aft_MainPipe_PortFan_Fan:
+    Fixture
+    'vent fan unit' 'Vent fan unit'
 {
-    location = gameMain.DEVMODE ? me : Mundane_Hold_Port_AftPortShelves_Shelves;
-    label = 'the flashlight';
-    labelProper = 'The flashlight';
-    specialDescOrder = 30;
-    noun = 'flashlight';
-    adjective = '' '';
+    location = Vent_Aft_MainPipe_PortFan;
+    label = 'the fan unit';
+    labelProper = 'The fan unit';
+    specialDescOrder = 1;
+    noun = 'fan' 'unit';
+    adjective = 'vent' 'fan';
     isDyst = nil;
     threshold = 1;
     isListed = nil;
@@ -23,21 +23,29 @@ Mundane_Hold_Port_Flashlight:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
+In the center of the room is a large ventilation fan unit.
         '
     ];
 
     msgDmg = [
         '
+In the center of the room is a large ventilation fan unit.
+\n
+It has been shot and destroyed.
         '
     ];
 
     ex = [
         '
+You examine the ventilation fan unit.
         '
     ];
 
     exDmg = [
         '
+You examine the ventilation fan unit.
+\n
+It has been shot and destroyed.
         '
     ];
 
@@ -57,40 +65,12 @@ Mundane_Hold_Port_Flashlight:
 
 
 // --[EVENTS]-------------------------------------------------------------------
-    dovjFor(Take)
-    {
-        "You can use the flashlight by saying:\nturn on flashlight";
-        inherited;
-    };
     dobjFor(Examine)
     {
         action()
         {
             Ex_Shootable(self);
         };
-    };
-    dobjFor(TurnOn)
-    {
-        /*
-        check()
-        {
-            if(!Mundane_Hold_Port_Aft_Shelves_03.battery01.isIn(self) || shotCount > 0)
-            {
-                "Nothing happens. ";
-                exit;
-            }
-        }
-        */
-    };
-    notifyRemove(obj)
-    {
-        /*
-        if(isOn)
-        { 
-            "Removing the battery causes the flashlight to go out. ";
-            makeOn(nil);        
-        }
-        */   
     };
     dobjFor(Shoot)
     {

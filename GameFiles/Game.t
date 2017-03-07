@@ -90,6 +90,12 @@ gameMain: GameMainDef
 
             if (k == '') // Just to avoid a Warning
             {}
+            if (k == 'vent')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Vent_Aft_PortHoldVent);
+            }
             if (k == 'gp')
             {
                 cls();
