@@ -23,29 +23,29 @@ GuardPost_Desk:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the forward starboard section of the guard post is a desk.
+In the forward starboard section of the guard post is a desk.\n
         '
     ];
 
     msgDmg = [
         '
-In the forward starboard section of the guard post is a desk.
-It has been shot and damaged.
+In the forward starboard section of the guard post is a desk.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the guard post desk.
-It is made of rough steel plates.
+You examine the guard post desk.\n
+It is made of rough steel plates.\n
         '
     ];
 
     exDmg = [
         '
-You examine the guard post desk.
-It is made of rough steel plates.
-It has been shot and damaged.
+You examine the guard post desk.\n
+It is made of rough steel plates.\n
+It has been shot and damaged.\n
         '
     ];
 

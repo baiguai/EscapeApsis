@@ -53,8 +53,8 @@ GuardPost_Cabinet_Uniform:
             Ex_General(self);
 
             "
-The uniform looks identical to the uniforms worn by the ship\'s guards.
-To put it on use \'put on uniform\'.
+The uniform looks identical to the uniforms worn by the ship\'s guards.\n
+To put it on use \'put on uniform\'.\n
             ";
         };
     };

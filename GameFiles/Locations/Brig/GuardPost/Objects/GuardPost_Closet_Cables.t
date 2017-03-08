@@ -20,14 +20,14 @@ Brig_GuardPost_Closet_Cables:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Near the cameras are coiled piles of network cables.
+Near the cameras are coiled piles of network cables.\n
         '
     ];
 
     ex = [
         '
-You examine the network cables.
-They are neatly coiled on the floor.
+You examine the network cables.\n
+They are neatly coiled on the floor.\n
         '
     ];
 // -----------------------------------------------------------------------------

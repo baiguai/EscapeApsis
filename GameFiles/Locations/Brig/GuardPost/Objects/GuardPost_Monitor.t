@@ -31,28 +31,28 @@ GuardPost_Monitor:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Sitting on the desk is a computer monitor.
+Sitting on the desk is a computer monitor.\n
         '
     ];
 
     msgDmg = [
         '
-Sitting on the desk is a computer monitor.
-It has been shot and destroyed.
-Its shattered screen is blank.
+Sitting on the desk is a computer monitor.\n
+It has been shot and destroyed.\n
+Its shattered screen is blank.\n
         '
     ];
 
     ex = [
         '
-You examine the computer monitor.
+You examine the computer monitor.\n
         '
     ];
 
     exDmg = [
         '
-You examine the computer monitor.
-It has been shot and destroyed.
+You examine the computer monitor.\n
+It has been shot and destroyed.\n
         '
     ];
 

@@ -23,28 +23,28 @@ GuardPost_Cabinet:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Along the aft wall is a filing cabinet.
+Along the aft wall is a filing cabinet.\n
         '
     ];
 
     msgDmg = [
         '
-Along the aft wall is a filing cabinet.
-It has been shot and damaged.
+Along the aft wall is a filing cabinet.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the filing cabinet. You see shelves inside. To look inside the
-cabinet use \'look in cabinet\'.
+You examine the filing cabinet. You see shelves inside. To look inside the\n
+cabinet use \'look in cabinet\'.\n
         '
     ];
 
     exDmg = [
         '
-You examine the filing cabinet.
-It has been shot and damaged.
+You examine the filing cabinet.\n
+It has been shot and damaged.\n
         '
     ];
 
@@ -71,14 +71,14 @@ It has been shot and damaged.
             if (GuardPost_Cabinet_Uniform.location == GuardPost_Cabinet)
             {
                 "
-You see a uniform sitting on one of the shelves inside the
-cabinet.
+You see a uniform sitting on one of the shelves inside the\n
+cabinet.\n
                 ";
             }
 
             "
-There are random office supplies and other mundane items stacked on the
-cabinet\'s shelves.
+There are random office supplies and other mundane items stacked on the\n
+cabinet\'s shelves.\n
             ";
         };
     };

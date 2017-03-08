@@ -19,15 +19,15 @@ Mundane_Hold_Port_Handsaw:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-You see a hand saw.
+You see a hand saw.\n
         '
     ];
 
     ex = [
         '
-You exammine the hand saw.
-It appears to be in excellent condition and its blade appears to e sharp and
-unused.
+You exammine the hand saw.\n
+It appears to be in excellent condition and its blade appears to e sharp and\n
+unused.\n
         '
     ];
 // -----------------------------------------------------------------------------

@@ -14,7 +14,7 @@ Vent_Aft_MainPipe_PortFan:
 
     msg = [
         '
-The room beyond the vent grate is small.
+The room beyond the vent grate is small.\n
         '
     ];
 

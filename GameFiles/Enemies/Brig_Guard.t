@@ -30,25 +30,25 @@ Brig_Guard:
     ';
 
     deadMessage = "
-A guard lies dead on the ground.
+A guard lies dead on the ground.\n
 <<descCount < 1 ?
 '
-His face is smashed in and blood covers most of his sleek white body suit.
-You look down at your knuckles amazed at how easy it had been to kill the
-man.
-\n
+His face is smashed in and blood covers most of his sleek white body suit.\n
+You look down at your knuckles amazed at how easy it had been to kill the\n
+man.\n
+\b
 ' :
 ''
 >>
 <<Brig_Guard_PComm.location == Brig_Cell04 ?
 '
-Strapped to his belt you see a Personal Communicator (PComm).
+Strapped to his belt you see a Personal Communicator (PComm).\n
 ' :
 ''
 >>
 <<EPistol.location == Brig_Cell04 ?
 '
-In a holster at the guard\'s waist is an energy pistol.
+In a holster at the guard\'s waist is an energy pistol.\n
 ' :
 ''
 >>

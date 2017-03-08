@@ -19,14 +19,14 @@ Brig_GuardPost_Closet_CleaningSupplies:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The guard post closet is filled with cleaning supplies and old computer parts.
+The guard post closet is filled with cleaning supplies and old computer parts.\n
         '
     ];
 
     ex = [
         '
-You examine the cleaning supplies.
-You see a push broom and a mop and bucket as well as cleaning solutions.
+You examine the cleaning supplies.\n
+You see a push broom and a mop and bucket as well as cleaning solutions.\n
         '
     ];
 // -----------------------------------------------------------------------------

@@ -24,38 +24,38 @@ Brig_GuardPost_Closet_Cameras:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-You see some camera units stacked on the floor.
+You see some camera units stacked on the floor.\n
         '
     ];
 
     msgDmg = [
         '
-You see some camera units stacked on the floor.
-One of them has been shot and destroyed.
+You see some camera units stacked on the floor.\n
+One of them has been shot and destroyed.\n
         ',
         '
-You see some camera units stacked on the floor.
-Some of them have been shot and destroyed.
+You see some camera units stacked on the floor.\n
+Some of them have been shot and destroyed.\n
         '
     ];
 
     ex = [
         '
-You examine the camera units.
-They appear to be decommisioned and outdated.
+You examine the camera units.\n
+They appear to be decommisioned and outdated.\n
         '
     ];
 
     exDmg = [
         '
-You examine the camera units.
-They appear to be decommisioned and outdated.
-One of them has been shot and destroyed.
+You examine the camera units.\n
+They appear to be decommisioned and outdated.\n
+One of them has been shot and destroyed.\n
         ',
         '
-You examine the camera units.
-They appear to be decommisioned and outdated.
-Some of them have been shot and destroyed.
+You examine the camera units.\n
+They appear to be decommisioned and outdated.\n
+Some of them have been shot and destroyed.\n
         '
     ];
 

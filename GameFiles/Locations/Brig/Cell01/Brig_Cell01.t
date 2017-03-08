@@ -25,19 +25,21 @@ Brig_Cell01:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         Desc_Location(self);
 
         "
 <<Ship.PowerGeneratorOn == nil ?
 '
-Cell one is bathed in dim red auxiliary light.
+Cell one is bathed in dim red auxiliary light.\n
 ' :
 '
-Dim flickering light from the brig\'s overhead flourescents fills the small
-cell.
+Dim flickering light from the brig\'s overhead flourescents fills the small\n
+cell.\n
 '
 >>
-In the starboard wall is the cell door.
+In the starboard wall is the cell door.\n
 \b\b
         ";
     };

@@ -42,6 +42,8 @@ Brig:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         if (self.hasSpawned == nil)
         {
             camera01 = SpawnCamera01(Brig, 'forward port camera', ['forward','port']);
@@ -71,56 +73,58 @@ Brig:
             "To put an item on say: put on [item name]\n";
         }
 
+        cls();
+
         "
 \b
-The brig is dingy and dim.
+The brig is dingy and dim.\n
 <<Ship.PowerGeneratorOn == nil ?
 '
-Red auxiliary lights glow dimly in the corners of the main room.
+Red auxiliary lights glow dimly in the corners of the main room.\n
 '
 :
 '
-It is lit only by a couple of flickering flourescent tubes overhead.
+It is lit only by a couple of flickering flourescent tubes overhead.\n
 '
 >>
-The walls are filthy and rust is breaking out here and there along their edges.
-\n
-It contains four cramped cells arranged along the starboard, aft, and port walls
-\n
-In the forward wall, starboard of the entrance is the guard post.
-It is enclosed in thick armored glass.
-The entrance to the gard post is in its port wall, nearest the brig's entrance.
-\n
-A closet is set into the aft starboard corner and a small holding cell is located
-in the forward port corner.
+The walls are filthy and rust is breaking out here and there along their edges.\n
+\b
+It contains four cramped cells arranged along the starboard, aft, and port walls\n
+\b
+In the forward wall, starboard of the entrance is the guard post.\n
+It is enclosed in thick armored glass.\n
+The entrance to the gard post is in its port wall, nearest the brig's entrance.\n
+\b
+A closet is set into the aft starboard corner and a small holding cell is located\n
+in the forward port corner.\n
 \b
 <<camera01.shotCount < 1 ?
-'In the forward port corner, mounted on the ceiling is a camera.'
+'In the forward port corner, mounted on the ceiling is a camera.\n'
 :
-'In the forward port corner, mounted on the ceiling is a camera.
- It has been shot and destroyed.'
->>
-\n
-<<camera02.shotCount < 1 ?
-'In the aft port corner, mounted on the ceiling is a camera.'
-:
-'In the aft port corner, mounted on the ceiling is a camera.
- It has been shot and destroyed.'
->>
-\n
-<<camera03.shotCount < 1 ?
-'In the aft starboard corner, mounted on the ceiling is a camera.'
-:
-'In the aft starboard corner, mounted on the ceiling is a camera.
- It has been shot and destroyed.'
+'In the forward port corner, mounted on the ceiling is a camera.\n
+ It has been shot and destroyed.\n'
 >>
 \b
-All the cameras are networked to the guard post. You
-can see the armored conduit running from each camera back to the guard post
-enclosure.
-\n
-The brig's entrance appears to be locked using a PComm
-scanner.
+<<camera02.shotCount < 1 ?
+'In the aft port corner, mounted on the ceiling is a camera.\n'
+:
+'In the aft port corner, mounted on the ceiling is a camera.\n
+ It has been shot and destroyed.\n'
+>>
+\b
+<<camera03.shotCount < 1 ?
+'In the aft starboard corner, mounted on the ceiling is a camera.\n'
+:
+'In the aft starboard corner, mounted on the ceiling is a camera.\n
+ It has been shot and destroyed.\n'
+>>
+\b
+All the cameras are networked to the guard post. You\n
+can see the armored conduit running from each camera back to the guard post\n
+enclosure.\n
+\b
+The brig's entrance appears to be locked using a PComm\n
+scanner.\n
 \b\b
         ";
 
@@ -213,6 +217,14 @@ Brig_Door_Inside:
                 ShowGoal();
             }
             inherited;
+        }
+    }
+
+    dobjFor(Enter)
+    {
+        action()
+        {
+            "<<cls()>>";
         }
     }
 };

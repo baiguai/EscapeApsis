@@ -32,26 +32,26 @@ Mundane_Hold_Port_Aft_Shelves_03:
 
     msgDmg = [
         '
-The row aft of that (shelves 3) is filled with various power supplies
-Next to the power supplies you see three batteries.
-\n
-The shelves have been shot and damaged.
+The row aft of that (shelves 3) is filled with various power supplies\n
+Next to the power supplies you see three batteries.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the third row of aft shelves.
-It is filled with various power supplies and batteries.
+You examine the third row of aft shelves.\n
+It is filled with various power supplies and batteries.\n
         '
     ];
 
     exDmg = [
         '
-You examine the third row of aft shelves.
-It is filled with various power supplies and batteries.
-\n
-The shelves have been shot and damaged.
+You examine the third row of aft shelves.\n
+It is filled with various power supplies and batteries.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
@@ -77,10 +77,10 @@ The shelves have been shot and damaged.
         local battCnt = 0;
         if (battery01.location == self.location) battCnt++;
 
-        "The row aft of that is filled with various power supplies";
+        "The row aft of that is filled with various power supplies\n";
         if (battCnt > 0)
         {
-            "Next to the power supplies you see <<battCnt>> batteries.";
+            "Next to the power supplies you see <<battCnt>> batteries.\n";
         }
     };
 // -----------------------------------------------------------------------------
@@ -96,11 +96,11 @@ The shelves have been shot and damaged.
             local battCnt = 0;
             if (battery01.location == self.location) battCnt++;
 
-            "You examine the third aft row of shelves. They are filled with
-            various power supplies";
+            "You examine the third aft row of shelves. They are filled with\n
+            various power supplies\n";
             if (battCnt > 0)
             {
-                "Next to the power supplies you see <<battCnt>> batteries.";
+                "Next to the power supplies you see <<battCnt>> batteries.\n";
             }
         };
     };

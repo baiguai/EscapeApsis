@@ -77,14 +77,14 @@ The bonds bonds that had held you are <<disabled == true ? 'disabled' : 'activat
         action()
         {
             "
-You examine the bonds that had held you captive.
+You examine the bonds that had held you captive.\n
 <<disabled == true ?
 '
-They are disabled. It appears when the ship was damaged they became deactivated.
+They are disabled. It appears when the ship was damaged they became deactivated.\n
 ' :
 '
-They are activated and blue bars of light glow over their surface. When the
-power generator was repaired the problem with the bonds was corrected.
+They are activated and blue bars of light glow over their surface. When the\n
+power generator was repaired the problem with the bonds was corrected.\n
 '
 >>
             ";

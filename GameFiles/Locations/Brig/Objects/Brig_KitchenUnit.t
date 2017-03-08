@@ -23,53 +23,53 @@ Brig_KitchenUnit:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the center of the brig is a small kitchen unit
+In the center of the brig is a small kitchen unit\n
         '
     ];
 
     msgDmg = [
         '
-In the center of the brig is a small kitchen unit
-It has been shot and destroyed. Smoke coils up through the air from the hole
-left in it.
+In the center of the brig is a small kitchen unit\n
+It has been shot and destroyed. Smoke coils up through the air from the hole\n
+left in it.\n
         ',
         '
-In the center of the brig is a small kitchen unit
-It has been shot and destroyed. Smoke coils up through the air from the holes
-left in it.
+In the center of the brig is a small kitchen unit\n
+It has been shot and destroyed. Smoke coils up through the air from the holes\n
+left in it.\n
         '
     ];
 
     ex = [
         '
-You examine the kitchen unit.
-It is a small black cube. A touch screen is set into its top surface.
-You cannot see where the prepared food is delivered.
-It is more modern than any cooking unit you\'ve seen before.
+You examine the kitchen unit.\n
+It is a small black cube. A touch screen is set into its top surface.\n
+You cannot see where the prepared food is delivered.\n
+It is more modern than any cooking unit you\'ve seen before.\n
         '
     ];
 
     exDmg = [
         '
-You examine the kitchen unit.
-It is a small black cube. A touch screen is set into its top surface.
-It has been shot and destroyed. Smoke rises from the hole that has been 
-shot into it.
+You examine the kitchen unit.\n
+It is a small black cube. A touch screen is set into its top surface.\n
+It has been shot and destroyed. Smoke rises from the hole that has been \n
+shot into it.\n
         ',
         '
-You examine the kitchen unit.
-It is a small black cube. A touch screen is set into its top surface.
-It has been shot and destroyed. Smoke rises from the holes that have been 
-shot into it.
+You examine the kitchen unit.\n
+It is a small black cube. A touch screen is set into its top surface.\n
+It has been shot and destroyed. Smoke rises from the holes that have been \n
+shot into it.\n
         '
     ];
 
     shootMsg = [
         '
-Sparks fly from the hole that has been made in it.
+Sparks fly from the hole that has been made in it.\n
         ',
         '
-Another hole is shot into the destroyed unit.
+Another hole is shot into the destroyed unit.\n
         '
     ];
 // -----------------------------------------------------------------------------

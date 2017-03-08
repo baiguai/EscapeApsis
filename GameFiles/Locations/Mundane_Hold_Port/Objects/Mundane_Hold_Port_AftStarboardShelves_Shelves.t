@@ -24,51 +24,51 @@ Mundane_Hold_Port_AftStarboardShelves_Shelves:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The shelves along the aft starboard wall are filled with fictional reading and
-historical documents.
-Some of the items are antique books, printed into physical copies, however
-a vast majority of the items on the shalves are organizers filled with small
-digital book cards. The fictional literature is divided into alphabetized genres.
-\n
-As you inspect the shelves you see the flash of something metallic behind the
-sturdy structure.
+The shelves along the aft starboard wall are filled with fictional reading and\n
+historical documents.\n
+Some of the items are antique books, printed into physical copies, however\n
+a vast majority of the items on the shalves are organizers filled with small\n
+digital book cards. The fictional literature is divided into alphabetized genres.\n
+\b
+As you inspect the shelves you see the flash of something metallic behind the\n
+sturdy structure.\n
         '
     ];
 
     msgDmg = [
         '
-The shelves along the aft starboard wall are filled with fictional reading and
-historical documents.
-Some of the items are antique books, printed into physical copies, however
-a vast majority of the items on the shalves are organizers filled with small
-digital book cards. The fictional literature is divided into alphabetized genres.
-\n
-The shelves have been shot and damaged.
+The shelves along the aft starboard wall are filled with fictional reading and\n
+historical documents.\n
+Some of the items are antique books, printed into physical copies, however\n
+a vast majority of the items on the shalves are organizers filled with small\n
+digital book cards. The fictional literature is divided into alphabetized genres.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the starboard wall shelves.
-They are filled with fictional reading and historical documents.
-Some of the items are antique books, printed into physical copies, however
-a vast majority of the items on the shalves are organizers filled with small
-digital book cards. The fictional literature is divided into alphabetized genres.
-\n
-As you inspect the shelves you see the flash of something metallic behind the
-sturdy structure.
+You examine the starboard wall shelves.\n
+They are filled with fictional reading and historical documents.\n
+Some of the items are antique books, printed into physical copies, however\n
+a vast majority of the items on the shalves are organizers filled with small\n
+digital book cards. The fictional literature is divided into alphabetized genres.\n
+\b
+As you inspect the shelves you see the flash of something metallic behind the\n
+sturdy structure.\n
         '
     ];
 
     exDmg = [
         '
-You examine the starboard wall shelves.
-They are filled with fictional reading and historical documents.
-Some of the items are antique books, printed into physical copies, however
-a vast majority of the items on the shalves are organizers filled with small
-digital book cards. The fictional literature is divided into alphabetized genres.
-\n
-The shelves have been shot and damaged.
+You examine the starboard wall shelves.\n
+They are filled with fictional reading and historical documents.\n
+Some of the items are antique books, printed into physical copies, however\n
+a vast majority of the items on the shalves are organizers filled with small\n
+digital book cards. The fictional literature is divided into alphabetized genres.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
@@ -85,9 +85,9 @@ The shelves have been shot and damaged.
         action()
         {
             "
-You look behind the shelves. There is just enough room for you to squeeze
-into the space between the shelves and the wall. Just above the floor you
-see a large metal vent cover. It appears to have been dislodged by something.
+You look behind the shelves. There is just enough room for you to squeeze\n
+into the space between the shelves and the wall. Just above the floor you\n
+see a large metal vent cover. It appears to have been dislodged by something.\n
             ";
             discover(Mundane_Hold_Port_AirShaft);
         }

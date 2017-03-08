@@ -24,13 +24,13 @@ Mundane_Hold_Port_AftPortShelves_Shelves:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The towering shelves along the port wall reach up into the shadows.
-They are filled with various computer components.
-\n
-The bottom shelf is filled with boxes of random tools. You see hammers,
-screwdrivers, welders, and soldering guns.
-Near the saw is a flashlight.
-Folded in another box are rags
+The towering shelves along the port wall reach up into the shadows.\n
+They are filled with various computer components.\n
+\b
+The bottom shelf is filled with boxes of random tools. You see hammers,\n
+screwdrivers, welders, and soldering guns.\n
+Near the saw is a flashlight.\n
+Folded in another box are rags\n
         '
     ];
 

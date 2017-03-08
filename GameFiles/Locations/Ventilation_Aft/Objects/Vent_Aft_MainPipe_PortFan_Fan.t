@@ -23,29 +23,29 @@ Vent_Aft_MainPipe_PortFan_Fan:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the center of the room is a large ventilation fan unit.
+In the center of the room is a large ventilation fan unit.\n
         '
     ];
 
     msgDmg = [
         '
-In the center of the room is a large ventilation fan unit.
-\n
-It has been shot and destroyed.
+In the center of the room is a large ventilation fan unit.\n
+\b
+It has been shot and destroyed.\n
         '
     ];
 
     ex = [
         '
-You examine the ventilation fan unit.
+You examine the ventilation fan unit.\n
         '
     ];
 
     exDmg = [
         '
-You examine the ventilation fan unit.
-\n
-It has been shot and destroyed.
+You examine the ventilation fan unit.\n
+\b
+It has been shot and destroyed.\n
         '
     ];
 

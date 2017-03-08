@@ -231,7 +231,6 @@ Do_Enemy_Message(life, message, deadMessage)
     }
     else
     {
-        "No life!";
         // "<<deadMessage>>";
     }
 

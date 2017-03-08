@@ -21,20 +21,20 @@ Brig_Hall:
 
     msg = [
         '
-You are in a short hall.
+You are in a short hall.\n
 <<Ship.PowerGeneratorOn == nil ?
 '
-It is filled with the dim red of auxiliary lights.
+It is filled with the dim red of auxiliary lights.\n
 '
 :
 '
-Overhead pale flourescent tubes buzz and flicker.
+Overhead pale flourescent tubes buzz and flicker.\n
 '
 >>
-\n
-In the aft wall is the door back into the brig.
-\n
-In the forward wall is another door.
+\b
+In the aft wall is the door back into the brig.\n
+\b
+In the forward wall is another door.\n
         '
     ];
 
@@ -48,6 +48,8 @@ In the forward wall is another door.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         if (Ship.PowerGeneratorOn)
         {
             canSpawn = true;

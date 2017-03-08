@@ -14,12 +14,12 @@ Vent_Aft_MainPipe_PortFanVent:
 
     msg = [
         '
-The port side vent pipe is cramped and hot.
-Air blows through the pipe.
-\n
-At the port end is a vent opening with a metal grate covering it.
-\n
-At the starboard end it enters into a larger vent pipe.
+The port side vent pipe is cramped and hot.\n
+Air blows through the pipe.\n
+\b
+At the port end is a vent opening with a metal grate covering it.\n
+\b
+At the starboard end it enters into a larger vent pipe.\n
         '
     ];
 
@@ -42,7 +42,7 @@ At the starboard end it enters into a larger vent pipe.
     starboard: TravelWithMessage, RoomConnector {
         travelDesc()
         {
-            Desc_Navigation('You travel starboard into the main ventilation
+            Desc_Navigation('You travel starboard into the main ventilation\n
                 pipe.');
         };
         room1 = Vent_Aft_MainPipe_PortFanVent;

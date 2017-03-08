@@ -13,20 +13,20 @@ Mundane_Hold_Access:
 
     msg = [
         '
-The access hall is a wide spacious room.
+The access hall is a wide spacious room.\n
 <<Ship.PowerGeneratorOn == nil ?
 '
-Red auxiliary lights glow in the corner of the hall, dimly illuminating it.
+Red auxiliary lights glow in the corner of the hall, dimly illuminating it.\n
 '
 :
 '
-Flourescent tubes flicker overhead.
+Flourescent tubes flicker overhead.\n
 '
 >>
-A door is set into the center of the forward wall.
-\n
-In the aft wall are three doors, one in the port section of the wall, one in
-the starboard section of the wall, and the door to the brig in the center.
+A door is set into the center of the forward wall.\n
+\b
+In the aft wall are three doors, one in the port section of the wall, one in\n
+the starboard section of the wall, and the door to the brig in the center.\n
         '
     ];
 
@@ -42,8 +42,7 @@ the starboard section of the wall, and the door to the brig in the center.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        // Add a guard spawner
-        // Spawner_Guard(Brig_Hall);
+        cls();
 
         Desc_Location(self);
     };

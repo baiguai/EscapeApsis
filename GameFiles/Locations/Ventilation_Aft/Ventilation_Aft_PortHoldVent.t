@@ -14,10 +14,10 @@ Vent_Aft_PortHoldVent:
 
     msg = [
         '
-The narrow pipe that connects the hold wall vent with the central ventilation
-system is very cramped.
-You are already breaking into a sweat and, although you have no problems with
-enclosed spaces, you feel claustrophobic and panicky.
+The narrow pipe that connects the hold wall vent with the central ventilation\n
+system is very cramped.\n
+You are already breaking into a sweat and, although you have no problems with\n
+enclosed spaces, you feel claustrophobic and panicky.\n
         '
     ];
 

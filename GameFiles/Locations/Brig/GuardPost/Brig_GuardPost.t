@@ -28,6 +28,8 @@ Brig_GuardPost:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         if (hasSpawned == nil)
         {
             camera = SpawnCamera01(Brig_GuardPost, 'forward camera', ['forward']);
@@ -39,22 +41,22 @@ Brig_GuardPost:
         "
 <<Ship.PowerGeneratorOn == nil ?
 '
-Red auxiliary light floods into the guard post.
+Red auxiliary light floods into the guard post.\n
 ' :
 '
-Pale flourescent light from above fills the guard post.
+Pale flourescent light from above fills the guard post.\n
 '
 >>
-It is a cramped square shaped room.
+It is a cramped square shaped room.\n
 \n
-At the port side of the cabinet is a large closet.
-In the port wall is the door leading back to the main brig area.
+At the port side of the cabinet is a large closet.\n
+In the port wall is the door leading back to the main brig area.\n
 \n
 <<camera.shotCount < 1 ?
-'Forward of the door is a camera mounted into the ceiling.'
+'Forward of the door is a camera mounted into the ceiling.\n'
 :
-'Forward of the door is a camera mounted into the ceiling.
- It has been shot and destroyed.'
+'Forward of the door is a camera mounted into the ceiling.\n
+ It has been shot and destroyed.\n'
 >>
 \b\b
         ";

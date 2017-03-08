@@ -24,25 +24,25 @@ Mundane_Hold_Port_Aft_Shelves_04:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Beyond that row, the final section of shelves (shelves 4) are filled with miscellaneous
-items.
+Beyond that row, the final section of shelves (shelves 4) are filled with\n
+miscellaneous items.\n
         '
     ];
 
     msgDmg = [
         '
-Beyond that row, the final section of shelves are filled with miscellaneous
-items.
-\n
-The shelves have been shot and damaged.
+Beyond that row, the final section of shelves are filled with miscellaneous\n
+items.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the row of shelves furthest aft.
-Beyond that row, the final section of shelves are filled with miscellaneous
-items.
+You examine the row of shelves furthest aft.\n
+Beyond that row, the final section of shelves are filled with miscellaneous\n
+items.\n
         '
     ];
 

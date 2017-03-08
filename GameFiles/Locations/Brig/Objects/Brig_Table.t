@@ -23,31 +23,31 @@ Brig_Table:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Near the kitchen unit is a mess table that is used by the guards as they work
-long shifts.
+Near the kitchen unit is a mess table that is used by the guards as they work\n
+long shifts.\n
         '
     ];
 
     msgDmg = [
         '
-Near the kitchen unit is a mess table that is used by the guards as they work
-long shifts.
-It has been shot and damaged.
+Near the kitchen unit is a mess table that is used by the guards as they work\n
+long shifts.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the mess table. It is made of brushed steel plates.
-Nothing is sitting on it.
+You examine the mess table. It is made of brushed steel plates.\n
+Nothing is sitting on it.\n
         '
     ];
 
     exDmg = [
         '
-You examine the mess table. It is made of brushed steel plates.
-Nothing is sitting on it.
-It has been shot and damaged.
+You examine the mess table. It is made of brushed steel plates.\n
+Nothing is sitting on it.\n
+It has been shot and damaged.\n
         '
     ];
 

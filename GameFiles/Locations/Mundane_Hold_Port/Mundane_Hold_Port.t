@@ -13,13 +13,13 @@ Mundane_Hold_Port:
 
     msg = [
         '
-You are in one of the ship\'s holds.
-It is vast and dim.
-\n
-In the thick shadows along the port and starboard walls you can make out the
-shadowy forms of shelves, rising up over 6 meters.
-\n
-Aft, in the shadows are more shelves.
+You are in one of the ship\'s holds.\n
+It is vast and dim.\n
+\b
+In the thick shadows along the port and starboard walls you can make out the\n
+shadowy forms of shelves, rising up over 6 meters.\n
+\b
+Aft, in the shadows are more shelves.\n
         '
     ];
 
@@ -35,6 +35,8 @@ Aft, in the shadows are more shelves.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------

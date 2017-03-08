@@ -21,12 +21,12 @@ Mundane_Hold_Port_Aft:
 
     msg = [
         '
-The aft section is filled with narrow shelves. You can see four rows of them,
-each aft of the previous.
-\n
-Along the port and starboard walls are towering shelves that reach up into the
-shadows far above.
-\n
+The aft section is filled with narrow shelves. You can see four rows of them,\n
+each aft of the previous.\n
+\b
+Along the port and starboard walls are towering shelves that reach up into the\n
+shadows far above.\n
+\b
         '
     ];
 
@@ -41,6 +41,8 @@ shadows far above.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         if (GuardPost_Cabinet_Uniform.isWornBy(me))
         {
             canSpawn = nil;

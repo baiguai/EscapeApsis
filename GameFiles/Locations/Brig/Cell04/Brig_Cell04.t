@@ -25,25 +25,33 @@ Brig_Cell04:
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        if (descCount > 0)
+        {
+            cls();
+        }
+
         Desc_Location(self);
 
         "
 <<Ship.PowerGeneratorOn == nil ?
 '
-Your small cell is bathed in dim red auxiliary light.
-It appears that the power generator is still out.
+Your small cell is bathed in dim red auxiliary light.\n
+It appears that the power generator is still out.\n
 ' :
 '
-Dim flickering light from the brig\'s overhead flourescents fills the small
-cell.
+Dim flickering light from the brig\'s overhead flourescents fills the small\n
+cell.\n
 '
 >>
-The rest of the cell is bare.
-In the port wall is the cell door.
+The rest of the cell is bare.\n
 \b
-To examine an item or a person say: examine (or x) [item name]
-\n
-To attempt to take an item say: take [item name]
+In the port wall is the cell door.\n
+\b
+To examine an item or a person say: examine (or x) [item name]\n
+\b
+To attempt to take an item say: take [item name]\n
+\b
+To look around say: look (or l)\n
 \b\b
         ";
     };

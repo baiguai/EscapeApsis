@@ -14,11 +14,11 @@ Vent_Aft_MainPipe:
 
     msg = [
         '
-The aft section of the main aft ventilation pipe is a large tube running forward and aft through
-the ship. You find it uncomfortable to breathe in the hot pipe. The vent
-continues forward into utter darkness.
-\n
-Branching off to the port is a varrow short pipe back to the Port side hold.
+The aft section of the main aft ventilation pipe is a large tube running forward and aft through\n
+the ship. You find it uncomfortable to breathe in the hot pipe. The vent\n
+continues forward into utter darkness.\n
+\b
+Branching off to the port is a varrow short pipe back to the Port side hold.\n
         '
     ];
 

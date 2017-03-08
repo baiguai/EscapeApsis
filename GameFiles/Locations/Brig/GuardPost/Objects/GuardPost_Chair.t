@@ -22,29 +22,29 @@ GuardPost_Chair:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the aft starboard corner of the room is an extra chair.
+In the aft starboard corner of the room is an extra chair.\n
         '
     ];
 
     msgDmg = [
         '
-In the aft starboard corner of the room is an extra chair.
-It has been shot and damaged.
+In the aft starboard corner of the room is an extra chair.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the chair.
-It is made of black leather and chrome.
+You examine the chair.\n
+It is made of black leather and chrome.\n
         '
     ];
 
     exDmg = [
         '
-You examine the chair.
-It is made of black leather and chrome.
-It has been shot and damaged.
+You examine the chair.\n
+It is made of black leather and chrome.\n
+It has been shot and damaged.\n
         '
     ];
 

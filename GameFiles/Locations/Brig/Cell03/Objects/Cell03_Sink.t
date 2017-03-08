@@ -23,33 +23,33 @@ Brig_Cell03_Sink:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-In the aft starboard corner of the cell is a small sink
+In the aft starboard corner of the cell is a small sink\n
         '
     ];
 
     msgDmg = [
         '
-The sink has been shot by a weapon.
-Its metal surface has been marred.
+The sink has been shot by a weapon.\n
+Its metal surface has been marred.\n
         '
     ];
 
     ex = [
         '
-You examine the small sink.
-It is made of brushed steel.
-There is no faucet, just a small opening out of which water emits.
-The drain is a small circle of pin point openings.
+You examine the small sink.\n
+It is made of brushed steel.\n
+There is no faucet, just a small opening out of which water emits.\n
+The drain is a small circle of pin point openings.\n
         '
     ];
 
     exDmg = [
         '
-You examine the small sink.
-It is made of brushed steel.
-There is no faucet, just a small opening out of which water emits.
-The drain is a small circle of pin point openings.
-It has been shot and damaged.
+You examine the small sink.\n
+It is made of brushed steel.\n
+There is no faucet, just a small opening out of which water emits.\n
+The drain is a small circle of pin point openings.\n
+It has been shot and damaged.\n
         '
     ];
 

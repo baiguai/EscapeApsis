@@ -23,36 +23,36 @@ Mundane_Hold_Port_MaintComm:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-You see a maintenance comm port, use to hack program robots, other than that
-most of the pieces appear to be useless on their own.
+You see a maintenance comm port, use to hack program robots, other than that\n
+most of the pieces appear to be useless on their own.\n
         '
     ];
 
     msgDmg = [
         '
-You see a maintenance comm port, use to hack program robots, other than that
-most of the pieces appear to be useless on their own.
-\n
-It has been shot and destroyed.
+You see a maintenance comm port, use to hack program robots, other than that\n
+most of the pieces appear to be useless on their own.\n
+\b
+It has been shot and destroyed.\n
         '
     ];
 
     ex = [
         '
-You examine the maintenance comm port. It is a small box with a screen on the
-top. It has a small hole below the screen to listen for voice commands.
-A few cords protrude from its sides with various connectors at the ends of them.
+You examine the maintenance comm port. It is a small box with a screen on the\n
+top. It has a small hole below the screen to listen for voice commands.\n
+A few cords protrude from its sides with various connectors at the ends of them.\n
         '
     ];
 
     exDmg = [
         '
-You examine the maintenance comm port. It is a small box with a screen on the
-top. It has a small hole below the screen to listen for voice commands.
-A few cords protrude from its sides with various connectors at the ends of them.
-\n
-It has been shot and destroyed. Its screen is shattered and there is a large
-hole blown into it.
+You examine the maintenance comm port. It is a small box with a screen on the\n
+top. It has a small hole below the screen to listen for voice commands.\n
+A few cords protrude from its sides with various connectors at the ends of them.\n
+\b
+It has been shot and destroyed. Its screen is shattered and there is a large\n
+hole blown into it.\n
         '
     ];
 

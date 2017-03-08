@@ -24,27 +24,27 @@ Mundane_Hold_Port_Computer:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Aft of the entrance you see a computer terminal, its glowing monitor is much
-brighter than the overhead lights.
+Aft of the entrance you see a computer terminal, its glowing monitor is much\n
+brighter than the overhead lights.\n
         ',
         '
-Aft of the entrance you see a computer terminal, its monitor is glowing
-brightly.
+Aft of the entrance you see a computer terminal, its monitor is glowing\n
+brightly.\n
         '
     ];
 
     msgDmg = [
         '
-Aft of the entrance you see a computer terminal. It has been shot and
-destroyed. It has gone dark.
+Aft of the entrance you see a computer terminal. It has been shot and\n
+destroyed. It has gone dark.\n
         '
     ];
 
     ex = [
         '
-You examine the computer terminal.
-Listed on the screen is an inventory of items and their locations within
-the hold.
+You examine the computer terminal.\n
+Listed on the screen is an inventory of items and their locations within\n
+the hold.\n
 \b
 [PORT HOLD INVENTORY]
 \n

@@ -24,55 +24,55 @@ Mundane_Hold_Port_ForwardPortShelves_Shelves:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The forward port shelves are sturdy industrial structures that rise up into the
-shadows far overhead.
-\n
-Neatly folded jumpsuits and various other uniforms have been set on them
-in perfect stacks. On the lower shelves are civilian clothes and rows of
-work boots and shoes.
+The forward port shelves are sturdy industrial structures that rise up into the\n
+shadows far overhead.\n
+\b
+Neatly folded jumpsuits and various other uniforms have been set on them\n
+in perfect stacks. On the lower shelves are civilian clothes and rows of\n
+work boots and shoes.\n
         ',
         '
-The forward port shelves rise up into the shadows far overhead.
-\n
-Neatly folded jumpsuits and various other uniforms have been set on them
-in perfect stacks. On the lower shelves are civilian clothes and rows of
-work boots and shoes.
+The forward port shelves rise up into the shadows far overhead.\n
+\b
+Neatly folded jumpsuits and various other uniforms have been set on them\n
+in perfect stacks. On the lower shelves are civilian clothes and rows of\n
+work boots and shoes.\n
         '
     ];
 
     msgDmg = [
         '
-The forward port shelves rise up into the shadows far overhead.
-\n
-Neatly folded jumpsuits and various other uniforms have been set on them
-in perfect stacks. On the lower shelves are civilian clothes and rows of
-work boots and shoes.
-\n
-They have been shot and damaged. Some of the clothes are still smouldering.
+The forward port shelves rise up into the shadows far overhead.\n
+\b
+Neatly folded jumpsuits and various other uniforms have been set on them\n
+in perfect stacks. On the lower shelves are civilian clothes and rows of\n
+work boots and shoes.\n
+\b
+They have been shot and damaged. Some of the clothes are still smouldering.\n
         '
     ];
 
     ex = [
         '
-You examine the shelves. They line the port wall in the forward of the
-hold. They are made of hefty industrial metal.
-\n
-Neatly folded jumpsuits and various other uniforms have been set on them
-in perfect stacks. On the lower shelves are civilian clothes and rows of
-work boots and shoes.
+You examine the shelves. They line the port wall in the forward of the\n
+hold. They are made of hefty industrial metal.\n
+\b
+Neatly folded jumpsuits and various other uniforms have been set on them\n
+in perfect stacks. On the lower shelves are civilian clothes and rows of\n
+work boots and shoes.\n
         '
     ];
 
     exDmg = [
         '
-You examine the shelves. They line the port wall in the forward of the
-hold. They are made of hefty industrial metal.
-\n
-Neatly folded jumpsuits and various other uniforms have been set on them
-in perfect stacks. On the lower shelves are civilian clothes and rows of
-work boots and shoes.
-\n
-They have been shot and damaged. Some of the clothes are still smouldering.
+You examine the shelves. They line the port wall in the forward of the\n
+hold. They are made of hefty industrial metal.\n
+\b
+Neatly folded jumpsuits and various other uniforms have been set on them\n
+in perfect stacks. On the lower shelves are civilian clothes and rows of\n
+work boots and shoes.\n
+\b
+They have been shot and damaged. Some of the clothes are still smouldering.\n
         '
     ];
 

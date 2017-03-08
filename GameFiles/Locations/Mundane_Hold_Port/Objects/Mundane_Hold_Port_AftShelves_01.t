@@ -24,37 +24,37 @@ Mundane_Hold_Port_Aft_Shelves_01:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-The most forward of the shelves (shelves 1) is filled with office supplies. You see
-antiquated pads of paper and writing utensils as well as other miscellaneous
-supplies.
+The most forward of the shelves (shelves 1) is filled with office supplies. You see\n
+antiquated pads of paper and writing utensils as well as other miscellaneous\n
+supplies.\n
         '
     ];
 
     msgDmg = [
         '
-The most forward of the shelves is filled with office supplies. You see
-antiquated pads of paper and writing utensils as well as other miscellaneous
-supplies.
-\n
-The shelves have been shot and damaged.
+The most forward of the shelves is filled with office supplies. You see\n
+antiquated pads of paper and writing utensils as well as other miscellaneous\n
+supplies.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the most forward of the rows of shelves.
-They are filled with office supplies. You see pads of paper, writing utensils,
-and other miscellaneous supplies.
+You examine the most forward of the rows of shelves.\n
+They are filled with office supplies. You see pads of paper, writing utensils,\n
+and other miscellaneous supplies.\n
         '
     ];
 
     exDmg = [
         '
-You examine the most forward of the rows of shelves.
-They are filled with office supplies. You see pads of paper, writing utensils,
-and other miscellaneous supplies.
-\n
-The shelves have been shot and damaged.
+You examine the most forward of the rows of shelves.\n
+They are filled with office supplies. You see pads of paper, writing utensils,\n
+and other miscellaneous supplies.\n
+\b
+The shelves have been shot and damaged.\n
         '
     ];
 

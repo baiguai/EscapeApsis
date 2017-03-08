@@ -13,9 +13,9 @@ Brig_HoldingCell:
 
     msg = [
         '
-The holding cell is even smaller than the other cells in the brig.
-It doesn\'t contain a cot.
-In the starboard wall of the cell is a door.
+The holding cell is even smaller than the other cells in the brig.\n
+It doesn\'t contain a cot.\n
+In the starboard wall of the cell is a door.\n
         '
     ];
 
@@ -28,6 +28,8 @@ In the starboard wall of the cell is a door.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------

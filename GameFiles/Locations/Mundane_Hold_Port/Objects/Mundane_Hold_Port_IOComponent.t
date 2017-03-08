@@ -19,16 +19,16 @@ Mundane_Hold_Port_IOComponent:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-As you look closer you notice a small black box with IO connectors over its
-surface. It looks unfamiliar to you.
+As you look closer you notice a small black box with IO connectors over its\n
+surface. It looks unfamiliar to you.\n
         '
     ];
 
     ex = [
         '
-You examine the small black box.
-Its surface is lined with IO connectors.
-It is unlike any computer component you have seen before.
+You examine the small black box.\n
+Its surface is lined with IO connectors.\n
+It is unlike any computer component you have seen before.\n
         '
     ];
 // -----------------------------------------------------------------------------

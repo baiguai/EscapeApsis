@@ -23,29 +23,29 @@ GuardPost_DeskChair:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Positioned behind the desk is a tall-backed black leather chair.
+Positioned behind the desk is a tall-backed black leather chair.\n
         '
     ];
 
     msgDmg = [
         '
-Positioned behind the desk is a tall-backed black leather chair.
-It has been shot and damaged.
+Positioned behind the desk is a tall-backed black leather chair.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the desk chair.
-It is a high-backed chair made of black leather.
+You examine the desk chair.\n
+It is a high-backed chair made of black leather.\n
         '
     ];
 
     exDmg = [
         '
-You examine the desk chair.
-It is a high-backed chair made of black leather.
-It has been shot and damaged.
+You examine the desk chair.\n
+It is a high-backed chair made of black leather.\n
+It has been shot and damaged.\n
         '
     ];
 
