@@ -23,33 +23,33 @@ Brig_Cell04_Toilet:
 // --[OUTPUTS]------------------------------------------------------------------
     msg = [
         '
-Next to the sink is a toilet.
+Next to the sink is a toilet.\n
         '
     ];
 
     msgDmg = [
         '
-Next to the sink is a toilet.
-It has been shot and damaged.
+Next to the sink is a toilet.\n
+It has been shot and damaged.\n
         '
     ];
 
     ex = [
         '
-You examine the toilet.
-It is solid metal.
-There is no lid or seat that can be lifted. It is all one piece.
-The water inside it is foul and discolored.
+You examine the toilet.\n
+It is solid metal.\n
+There is no lid or seat that can be lifted. It is all one piece.\n
+The water inside it is foul and discolored.\n
         '
     ];
 
     exDmg = [
         '
-You examine the toilet.
-It is solid metal.
-There is no lid or seat that can be lifted. It is all one piece.
-The water inside it is foul and discolored.
-It has been shot and damaged.
+You examine the toilet.\n
+It is solid metal.\n
+There is no lid or seat that can be lifted. It is all one piece.\n
+The water inside it is foul and discolored.\n
+It has been shot and damaged.\n
         '
     ];
 

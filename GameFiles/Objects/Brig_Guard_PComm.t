@@ -31,6 +31,11 @@ Brig_Guard_PComm:
 
     ex = [
         '
+You examine the dead guard\'s Personal Communicator (PComm).
+It is locked with a passcode. You make a few guesses at it, but not surprising,
+fail to unlock it.
+        ',
+        '
 You examine the dead guard\'s PComm.
 It is locked with a passcode. You make a few guesses at it, but not surprising,
 fail to unlock it.

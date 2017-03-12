@@ -194,8 +194,13 @@ Brig_Door_Inside:
         {
             if(Brig.AllCamerasDisabled() == nil)
             {
-                failCheck('The partially disabled security system prevents
-                    the door from unlocking.');
+                failCheck(
+                '
+The partially functional security system prevents
+the door from unlocking.
+\n
+(Destroy the security cameras)
+                ');
             }
         } 
         action()

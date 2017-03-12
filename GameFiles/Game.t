@@ -124,6 +124,12 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Brig_Hall);
             }
+            if (k == 'sh')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Mundane_Hold_Starboard);
+            }
         }
         // ---------------------------------------------------------------------
 
@@ -142,9 +148,10 @@ You are being held in the brig.\n
 \b
 While the ship was breaking free of Saturn space it inadvertently\n
 skimmed her rings and was struck by debris damaging its shields and\n
-navigation system. The resulting momentary system surge and power\n
-outage disabled your restraints long enough for you to break free\n
-just as a guard was bringing your supper.\n
+navigation system.\n
+Somehow during the momentary power surge and following outage, your\n
+restraints became disabled allowing you to break free just as\n
+a guard was bringin your supper.\n
 \b
 You managed to kill the guard with your bare hands.\n
 \b
