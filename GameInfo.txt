@@ -4,11 +4,7 @@ Byline: baiguai
 AuthorEmail: baiguai.junk@gmail.com
 Desc: Fight your way to the bridge and take the ship.
 Version: 1
-<<<<<<< HEAD
-ReleaseDate: 2017-03-12
-=======
 ReleaseDate: 2017-03-15
->>>>>>> VentAftFan
 Language: en-US
 LicenseType: Freeware
 CopyingRules: Nominal cost only; compilations allowed

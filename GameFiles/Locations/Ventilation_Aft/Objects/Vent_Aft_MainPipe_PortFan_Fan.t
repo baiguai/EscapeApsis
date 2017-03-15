@@ -25,20 +25,15 @@ Vent_Aft_MainPipe_PortFan_Fan:
     msg = [
         '
 In the center of the room is a large ventilation fan unit.\n
+It is silent and the large fan behind the metal meshin its side is still.\n
         '
     ];
-        msg = [
-            '
-In the center of the room is a large ventilation fan unit.\n
-It is silent and the large fan behind the metal meshin its side is still.\n
-            '
-        ];
-        msgOn = [
-            '
+    msgOn = [
+        '
 In the center of the room is a large ventilation fan unit.\n
 Its large bladed fan is whirring loudly behind a large metal mesh.\n
-            '
-        ];
+        '
+    ];
 
     msgDmg = [
         '
