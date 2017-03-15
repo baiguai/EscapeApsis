@@ -213,13 +213,10 @@ me: Actor
     // Commands such as examine issued
     nonIdleTurn()
     {
-<<<<<<< HEAD
-=======
         /*
         "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
         "Run Time: <<gameMain.CurrentRuntime>>\b\b";
         */
->>>>>>> VentAftFan
         "
             <<TaskPassage(1)>>
         ";
@@ -228,13 +225,10 @@ me: Actor
     // Non-commands such as look issued
     noteConditionAfter()
     {
-<<<<<<< HEAD
-=======
         /*
         "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
         "Run Time: <<gameMain.CurrentRuntime>>\b\b";
         */
->>>>>>> VentAftFan
         "
             <<TaskPassage(1)>>
         ";

@@ -22,13 +22,11 @@ Vent_Aft_MainPipe_PortFan_Fan:
     isOn = true;
 
 // --[OUTPUTS]------------------------------------------------------------------
-<<<<<<< HEAD
     msg = [
         '
 In the center of the room is a large ventilation fan unit.\n
         '
     ];
-=======
         msg = [
             '
 In the center of the room is a large ventilation fan unit.\n
@@ -41,26 +39,20 @@ In the center of the room is a large ventilation fan unit.\n
 Its large bladed fan is whirring loudly behind a large metal mesh.\n
             '
         ];
->>>>>>> VentAftFan
 
     msgDmg = [
         '
 In the center of the room is a large ventilation fan unit.\n
-<<<<<<< HEAD
 \b
 It has been shot and destroyed.\n
-=======
 It has been shot and destroyed.\n
 The fan behind the metal mesh in its side sits motionless.\n
->>>>>>> VentAftFan
         '
     ];
 
     ex = [
         '
 You examine the ventilation fan unit.\n
-<<<<<<< HEAD
-=======
 It is made up of riveted metal plates.\n
 Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
 sits motionless.\n
@@ -72,21 +64,17 @@ You examine the ventilation fan unit.\n
 It is made up of riveted metal plates.\n
 Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
 spins loudly.\n
->>>>>>> VentAftFan
         '
     ];
 
     exDmg = [
         '
 You examine the ventilation fan unit.\n
-<<<<<<< HEAD
 \b
 It has been shot and destroyed.\n
-=======
 Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
 It has been shot and destroyed.\n
 The fan behind the metal mesh sits motionless.\n
->>>>>>> VentAftFan
         '
     ];
 
