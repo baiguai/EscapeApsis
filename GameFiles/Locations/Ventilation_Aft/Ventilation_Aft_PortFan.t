@@ -14,7 +14,9 @@ Vent_Aft_MainPipe_PortFan:
 
     msg = [
         '
-The room beyond the vent grate is small.
+The room beyond the vent grate is small.\n
+A red service light mounted in the center of the port wall is the\n
+only source of light.\n
         '
     ];
 

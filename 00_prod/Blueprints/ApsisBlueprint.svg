@@ -26,7 +26,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,19 +39,19 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="956"
-     inkscape:window-height="1060"
+     inkscape:window-width="1920"
+     inkscape:window-height="1062"
      id="namedview4964"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
-     inkscape:zoom="1.8632692"
-     inkscape:cx="451.09505"
-     inkscape:cy="857.27255"
+     inkscape:zoom="0.3488"
+     inkscape:cx="500"
+     inkscape:cy="1250"
      inkscape:window-x="0"
      inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="layer7"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer10"
      showguides="true"
      inkscape:guide-bbox="true">
     <inkscape:grid
@@ -5011,23 +5011,27 @@
          width="77.25"
          x="400.625" />
     </g>
-    <rect
-       x="400.625"
-       width="77.25"
-       height="167.25"
-       y="-83.625"
-       clip-path="url(#clipPath2-3-1)"
-       id="rect4530"
-       style="font-style:normal;font-weight:normal;font-size:medium;font-family:Dialog;color-interpolation:auto;fill:none;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:1.45000005;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-       transform="translate(224,1192)" />
-    <text
-       x="376.60159"
-       xml:space="preserve"
-       y="4.1543002"
-       clip-path="url(#clipPath2-3-1)"
-       id="text4532"
-       style="font-style:normal;font-weight:normal;font-size:medium;font-family:sans-serif;color-interpolation:auto;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:1.45000005;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
-       transform="translate(224,1192)">Shield Mid Starboard</text>
+    <g
+       style="font-style:normal;font-weight:normal;font-size:12px;font-family:Dialog;display:inline;color-interpolation:auto;fill:#000000;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:1.45000005;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
+       id="g4528"
+       transform="translate(224,1192)"
+       stroke-miterlimit="1.45">
+      <rect
+         style="fill:none"
+         id="rect4530"
+         clip-path="url(#clipPath2-3-1)"
+         y="-83.625"
+         height="167.25"
+         width="77.25"
+         x="400.625" />
+      <text
+         style="font-family:sans-serif;stroke:none"
+         id="text4532"
+         clip-path="url(#clipPath2-3-1)"
+         y="4.1543002"
+         xml:space="preserve"
+         x="376.60159">Shield Mid Starboard</text>
+    </g>
     <g
        style="font-style:normal;font-weight:normal;font-size:12px;font-family:Dialog;display:inline;color-interpolation:auto;fill:#ffeda8;fill-opacity:1;stroke:#ffeda8;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
        id="g4534"
@@ -5096,24 +5100,5 @@
          xml:space="preserve"
          x="241.5312">Generator</text>
     </g>
-    <ellipse
-       style="opacity:0.8;fill:#efefef;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
-       id="path5341"
-       cx="434.97079"
-       cy="1627.371"
-       rx="15.740338"
-       ry="12.669052" />
-    <text
-       xml:space="preserve"
-       style="font-style:normal;font-weight:normal;font-size:40px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       x="421.95901"
-       y="1630.6331"
-       id="text5343"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5345"
-         x="421.95901"
-         y="1630.6331"
-         style="font-size:8.75px">Robot</tspan></text>
   </g>
 </svg>

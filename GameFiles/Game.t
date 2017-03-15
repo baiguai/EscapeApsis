@@ -185,8 +185,10 @@ me: Actor
     // Commands such as examine issued
     nonIdleTurn()
     {
+        /*
         "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
         "Run Time: <<gameMain.CurrentRuntime>>\b\b";
+        */
         "
             <<TaskPassage(1)>>
         ";
@@ -195,8 +197,10 @@ me: Actor
     // Non-commands such as look issued
     noteConditionAfter()
     {
+        /*
         "\b\bTask Interval: <<gameMain.CurrentTasktime>>\b";
         "Run Time: <<gameMain.CurrentRuntime>>\b\b";
+        */
         "
             <<TaskPassage(1)>>
         ";

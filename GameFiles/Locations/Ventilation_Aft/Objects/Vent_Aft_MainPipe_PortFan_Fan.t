@@ -19,33 +19,53 @@ Vent_Aft_MainPipe_PortFan_Fan:
     canShoot = true;
     shotCount = 0;
     damageType = '';
+    isOn = true;
 
 // --[OUTPUTS]------------------------------------------------------------------
-    msg = [
-        '
-In the center of the room is a large ventilation fan unit.
-        '
-    ];
+        msg = [
+            '
+In the center of the room is a large ventilation fan unit.\n
+It is silent and the large fan behind the metal meshin its side is still.\n
+            '
+        ];
+        msgOn = [
+            '
+In the center of the room is a large ventilation fan unit.\n
+Its large bladed fan is whirring loudly behind a large metal mesh.\n
+            '
+        ];
 
     msgDmg = [
         '
-In the center of the room is a large ventilation fan unit.
-\n
-It has been shot and destroyed.
+In the center of the room is a large ventilation fan unit.\n
+It has been shot and destroyed.\n
+The fan behind the metal mesh in its side sits motionless.\n
         '
     ];
 
     ex = [
         '
-You examine the ventilation fan unit.
+You examine the ventilation fan unit.\n
+It is made up of riveted metal plates.\n
+Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
+sits motionless.\n
+        '
+    ];
+    exOn = [
+        '
+You examine the ventilation fan unit.\n
+It is made up of riveted metal plates.\n
+Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
+spins loudly.\n
         '
     ];
 
     exDmg = [
         '
-You examine the ventilation fan unit.
-\n
-It has been shot and destroyed.
+You examine the ventilation fan unit.\n
+Set into one of its sides is a metal mesh. Behind the mesh a large fan\n
+It has been shot and destroyed.\n
+The fan behind the metal mesh sits motionless.\n
         '
     ];
 
@@ -59,6 +79,11 @@ It has been shot and destroyed.
 // --[OUTPUT EVENTS]------------------------------------------------------------
     specialDesc()
     {
+        if (isOn)
+        {
+            msg = msgOn;
+        }
+
         Desc_Shootable(self);
     };
 // -----------------------------------------------------------------------------
@@ -69,6 +94,11 @@ It has been shot and destroyed.
     {
         action()
         {
+            if (isOn)
+            {
+                ex = exOn;
+            }
+
             Ex_Shootable(self);
         };
     };
@@ -77,6 +107,8 @@ It has been shot and destroyed.
         verify() { logical; }
         action()
         {
+            isOn = nil;
+
             if (ShootGun(self) == true)
             {
                 me.weapon.ShootMsg(self, '', shootMsg);
