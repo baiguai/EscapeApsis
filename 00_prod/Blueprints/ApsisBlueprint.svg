@@ -26,7 +26,11 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+<<<<<<< HEAD
         <dc:title />
+=======
+        <dc:title></dc:title>
+>>>>>>> VentAftFan
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -39,18 +43,32 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
+<<<<<<< HEAD
      inkscape:window-width="956"
      inkscape:window-height="1060"
+=======
+     inkscape:window-width="1920"
+     inkscape:window-height="1062"
+>>>>>>> VentAftFan
      id="namedview4964"
      showgrid="false"
      borderlayer="true"
      inkscape:showpageshadow="false"
+<<<<<<< HEAD
      inkscape:zoom="0.8179407"
      inkscape:cx="376.57354"
      inkscape:cy="1490.96"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="0"
+=======
+     inkscape:zoom="0.3488"
+     inkscape:cx="500"
+     inkscape:cy="1250"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+>>>>>>> VentAftFan
      inkscape:current-layer="layer10"
      showguides="true"
      inkscape:guide-bbox="true">
@@ -3178,7 +3196,11 @@
      inkscape:groupmode="layer"
      id="layer6"
      inkscape:label="Static Elements"
+<<<<<<< HEAD
      style="display:inline"
+=======
+     style="display:none"
+>>>>>>> VentAftFan
      sodipodi:insensitive="true">
     <g
        style="font-style:normal;font-weight:normal;font-size:12px;font-family:Dialog;display:inline;color-interpolation:auto;fill:#999999;fill-opacity:1;stroke:#999999;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:10;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:geometricPrecision;text-rendering:geometricPrecision"
