@@ -13,6 +13,9 @@ Ship:
     PowerGeneratorOn = nil;
     PowerDownTime = 0;
     PowerRepairTime = 0;
+    FansUp = 9;
+    Heat = 23;
+    CO2 = 800; // ppm CO2
 
     // Methods
     StateUpdate()
