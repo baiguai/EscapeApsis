@@ -22,7 +22,8 @@ Vent_Aft_MainPipe_PortFan_Fan:
     isOn = true;
 
 // --[OUTPUTS]------------------------------------------------------------------
-    msg = [
+    msg = [''];
+    msgOff = [
         '
 In the center of the room is a large ventilation fan unit.\n
 It is silent and the large fan behind the metal meshin its side is still.\n
@@ -45,7 +46,8 @@ The fan behind the metal mesh in its side sits motionless.\n
         '
     ];
 
-    ex = [
+    ex = [''];
+    exOff = [
         '
 You examine the ventilation fan unit.\n
 It is made up of riveted metal plates.\n
@@ -83,9 +85,13 @@ The fan behind the metal mesh sits motionless.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     specialDesc()
     {
-        if (isOn)
+        if (isOn == true)
         {
             msg = msgOn;
+        }
+        else
+        {
+            msg = msgOff;
         }
 
         Desc_Shootable(self);
@@ -98,9 +104,13 @@ The fan behind the metal mesh sits motionless.\n
     {
         action()
         {
-            if (isOn)
+            if (isOn == true)
             {
                 ex = exOn;
+            }
+            else
+            {
+                ex = exOff;
             }
 
             Ex_Shootable(self);
@@ -111,13 +121,27 @@ The fan behind the metal mesh sits motionless.\n
         verify() { logical; }
         action()
         {
-            isOn = nil;
+            TurnOff();
 
             if (ShootGun(self) == true)
             {
                 me.weapon.ShootMsg(self, '', shootMsg);
             };
         };
+    };
+// -----------------------------------------------------------------------------
+
+
+// --[HELPER METHODS]-----------------------------------------------------------
+    TurnOff()
+    {
+        if (isOn == true) Ship.VentOff();
+        isOn = nil;
+    };
+    TurnOn()
+    {
+        if (isOn == nil) Ship.VentOn();
+        isOn = true;
     };
 // -----------------------------------------------------------------------------
 };

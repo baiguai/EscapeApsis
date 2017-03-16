@@ -12,7 +12,8 @@ Vent_Aft_MainPipe_PortFanVent:
 // --[OUTPUTS]------------------------------------------------------------------
     move = [];
 
-    msg = [
+    msg = [''];
+    msgOff = [
         '
 The port side vent pipe is cramped and hot.\n
 \b
@@ -42,9 +43,13 @@ At the starboard end it enters into a larger vent pipe.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        if (Vent_Aft_MainPipe_PortFan_Fan.isOn)
+        if (Vent_Aft_MainPipe_PortFan_Fan.isOn == true)
         {
             msg = msgOn;
+        }
+        else
+        {
+            msg = msgOff;
         }
 
         Desc_Location(self);

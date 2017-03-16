@@ -33,6 +33,14 @@ TimePassage(interval)
     }
 };
 
+/*
+   Time Passage
+--------------------------------------------------------------------------------
+This is called whenever an action (or non action) is taken. It tracks the
+passage of time as well as checking the ship's status or other time related
+chesks.
+--------------------------------------------------------------------------------
+*/
 TaskPassage(interval)
 {
     gameMain.CurrentTasktime += interval;
@@ -42,6 +50,12 @@ TaskPassage(interval)
         gameMain.CurrentRuntime += 1;
         gameMain.CurrentTasktime = 0;
     }
+
+    // Ship status
+    Ship.StatusCheck();
+
+    // Random Events
+    RandomEventCheck();
 };
 // -----------------------------------------------------------------------------
 

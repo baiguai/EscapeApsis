@@ -1,5 +1,6 @@
 name: Main Game Libs
 
+source: RandomEvents.t
 source: Fighting.t
 source: Game.t
 source: Global.t

@@ -130,6 +130,12 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Mundane_Hold_Starboard);
             }
+            if (k == 'fan')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Vent_Aft_MainPipe_PortFan);
+            }
         }
         // ---------------------------------------------------------------------
 

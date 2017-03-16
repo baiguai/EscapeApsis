@@ -43,6 +43,7 @@ RepairTime: <<PowerRepairTime>>\n
         }
     };
 
+    // Power Methods
     PowerOff()
     {
         local rnd = rand(3) + 3; // 3-6 Range
@@ -62,4 +63,31 @@ The ship's power has been restored to full capacity.
 \b
         ";
     };
+
+    // Vent Fan Methods
+    VentOff()
+    {
+        FansUp--;
+        if (FansUp < 0) FansUp = 0;
+
+        LifeSupportCheck();
+    };
+    VentOn()
+    {
+        FansUp++;
+        LifeSupportCheck();
+    };
+
+
+// --[STATUS CHECKS]------------------------------------------------------------
+    StatusCheck()
+    {
+        // Check the overall status of the ship
+    };
+    LifeSupportCheck()
+    {
+        // Check the ship's heat and co2
+    };
+// -----------------------------------------------------------------------------
+
 };
