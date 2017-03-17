@@ -47,7 +47,7 @@ Branching off to port is a cramped ventilation pipe.\n
             Desc_Navigation('You crawl forward through the main vent pipe.');
         };
         room1 = Vent_Aft_MainPipe_Forward;
-        room2 = Vent_Aft_MainPipe_Forward;
+        room2 = Vent_Aft_MainPipe_Forward_End;
     };
     aft: TravelWithMessage, RoomConnector {
         travelDesc()

@@ -10,5 +10,7 @@ source: Ventilation_Aft_PortFan.t
 
 
 # Objects
+source: Objects/Vent_Aft_MainPipe_Forward_ForePortFan_Fan.t
+source: Objects/Vent_Aft_MainPipe_Forward_ForePortFan_Panel.t
 source: Objects/Vent_Aft_MainPipe_Panel.t
 source: Objects/Vent_Aft_MainPipe_PortFan_Fan.t

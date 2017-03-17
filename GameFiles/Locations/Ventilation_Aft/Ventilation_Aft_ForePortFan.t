@@ -14,6 +14,9 @@ Vent_Aft_MainPipe_Forward_ForePortFan:
 
     msg = [
         '
+You are in a small ventilation fan room.\n
+A red service light mounted in the center of the forward wall is the only\n
+source of light.\n
         '
     ];
 
@@ -31,20 +34,14 @@ Vent_Aft_MainPipe_Forward_ForePortFan:
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
-
-
-// --[NAVIGATION]---------------------------------------------------------------
-    north: TravelWithMessage, RoomConnector {
-        travelDesc()
-        {
-            Desc_Navigation('');
-        };
-        room1 = Vent_Aft_MainPipe_Forward_ForePortFan;
-        room2 = Vent_Aft_MainPipe_Forward_ForePortFan;
-    };
-// -----------------------------------------------------------------------------
 };
 
 
 // --[DOORS]--------------------------------------------------------------------
+Vent_Aft_MainPipe_Forward_End_Door_Inside:
+    Door -> Vent_Aft_MainPipe_Forward_End_Door
+    'vent door' 'vent door'
+{
+    location = Vent_Aft_MainPipe_Forward_ForePortFan;
+};
 // -----------------------------------------------------------------------------

@@ -136,6 +136,12 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Vent_Aft_MainPipe_PortFan);
             }
+            if (k == 'ffan')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Vent_Aft_MainPipe_Forward_ForePortFan);
+            }
         }
         // ---------------------------------------------------------------------
 

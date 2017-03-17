@@ -1,3 +1,3 @@
 name: Characters
 
-#source: DataCenter_FrontDeskAndroid.t
+source: SmallRobot.t
