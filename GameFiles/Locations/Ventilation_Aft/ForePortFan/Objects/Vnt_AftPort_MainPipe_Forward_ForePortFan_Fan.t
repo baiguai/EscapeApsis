@@ -1,11 +1,11 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe_Forward_ForePortFan_Fan:
+Vent_Aft_MainPipe_Port_Forward_ForePortFan_Fan:
     Fixture
     'vent fan unit' 'Vent fan unit'
 {
-    location = Vent_Aft_MainPipe_Forward_ForePortFan;
+    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
     label = 'the fan unit';
     labelProper = 'The fan unit';
     specialDescOrder = 1;

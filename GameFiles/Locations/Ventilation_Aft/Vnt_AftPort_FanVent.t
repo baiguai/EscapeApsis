@@ -1,7 +1,7 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe_PortFanVent:
+Vent_Aft_MainPipe_Port_PortFanVent:
     DarkRoom
 {
     roomName = "Ventilation Pipe";
@@ -43,7 +43,7 @@ At the starboard end it enters into a larger vent pipe.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        if (Vent_Aft_MainPipe_PortFan_Fan.isOn == true)
+        if (Vent_Aft_MainPipe_Port_PortFan_Fan.isOn == true)
         {
             msg = msgOn;
         }
@@ -64,8 +64,8 @@ At the starboard end it enters into a larger vent pipe.\n
             Desc_Navigation('You travel starboard into the main ventilation\n
                 pipe.');
         };
-        room1 = Vent_Aft_MainPipe_PortFanVent;
-        room2 = Vent_Aft_MainPipe_Forward;
+        room1 = Vent_Aft_MainPipe_Port_PortFanVent;
+        room2 = Vent_Aft_MainPipe_Port_Forward;
     };
 // -----------------------------------------------------------------------------
 };
@@ -74,11 +74,11 @@ At the starboard end it enters into a larger vent pipe.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Vent_Aft_MainPipe_PortFanVent_Opening:
+Vent_Aft_MainPipe_Port_PortFanVent_Opening:
     HiddenDoor
     'vent' 'vent'
 {
     isOpen = true;
-    location = Vent_Aft_MainPipe_PortFanVent;
+    location = Vent_Aft_MainPipe_Port_PortFanVent;
 };
 // -----------------------------------------------------------------------------

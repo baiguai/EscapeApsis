@@ -1,8 +1,8 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_PortHoldVent:
-    Room
+Vent_Aft_MainPipe_Port_Forward_End:
+    DarkRoom
 {
     roomName = "Ventilation Pipe";
     visitCount = 0;
@@ -14,16 +14,14 @@ Vent_Aft_PortHoldVent:
 
     msg = [
         '
-The narrow pipe that connects the hold wall vent with the central ventilation\n
-system is very cramped.\n
-You are already breaking into a sweat and, although you have no problems with\n
-enclosed spaces, you feel claustrophobic and panicky.\n
+Further forward in the main ventilation pipe it ends. A vent grate is set
+into the pipe\'s end wall.
         '
     ];
 
     nav = [
-        'enter vent: Exit to the hold.',
-        'starboard: Enter the main ventilation pipe.'
+        'enter vent: Enter the vent in the fore end of the pipe.',
+        'aft: Aft through the main ventilation pipe.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -31,32 +29,31 @@ enclosed spaces, you feel claustrophobic and panicky.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
 
 
 // --[NAVIGATION]---------------------------------------------------------------
-    starboard: TravelWithMessage, RoomConnector {
+    aft: TravelWithMessage, RoomConnector {
         travelDesc()
         {
-            Desc_Navigation('You crawl deeper into the vent');
+            Desc_Navigation('You crawl aft through the main ventilation pipe.');
         };
-        room1 = Vent_Aft_PortHoldVent;
-        room2 = Vent_Aft_MainPipe;
+        room1 = Vent_Aft_MainPipe_Port_Forward_End;
+        room2 = Vent_Aft_MainPipe_Port_Forward;
     };
 // -----------------------------------------------------------------------------
 };
 
 
-
-
 // --[DOORS]--------------------------------------------------------------------
-Mundane_Hold_Port_AirShaft_Inside:
-    HiddenDoor -> Mundane_Hold_Port_AirShaft
-    'vent' 'vent'
+Vent_Aft_MainPipe_Port_Forward_End_Door:
+    Door
+    'vent door' 'vent door'
 {
-    isOpen = true;
-    location = Vent_Aft_PortHoldVent;
+    location = Vent_Aft_MainPipe_Port_Forward_End;
 };
 // -----------------------------------------------------------------------------

@@ -1,7 +1,7 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe_Forward_End:
+Vent_Aft_Forward_Pipe:
     DarkRoom
 {
     roomName = "Ventilation Pipe";
@@ -14,14 +14,15 @@ Vent_Aft_MainPipe_Forward_End:
 
     msg = [
         '
-Further forward in the main ventilation pipe it ends. A vent grate is set
-into the pipe\'s end wall.
+The section of ventilation pipe you are in runs port to starboard. It is\n
+cramped and hot.\n
+At either end is a dislodged metal vent grate.\n
         '
     ];
 
     nav = [
-        'enter vent: Enter the vent in the fore end of the pipe.',
-        'aft: Aft through the main ventilation pipe.'
+        'enter starboard vent: Exit through the starboard vent grate.',
+        'enter port vent: Exit through the port side vent grate.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -34,26 +35,22 @@ into the pipe\'s end wall.
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
-
-
-// --[NAVIGATION]---------------------------------------------------------------
-    aft: TravelWithMessage, RoomConnector {
-        travelDesc()
-        {
-            Desc_Navigation('You crawl aft through the main ventilation pipe.');
-        };
-        room1 = Vent_Aft_MainPipe_Forward_End;
-        room2 = Vent_Aft_MainPipe_Forward;
-    };
-// -----------------------------------------------------------------------------
 };
 
 
 // --[DOORS]--------------------------------------------------------------------
-Vent_Aft_MainPipe_Forward_End_Door:
-    Door
-    'vent door' 'vent door'
+Vent_Aft_MainPipe_Port_Forward_ForePortFan_Door_Inside:
+    Door -> Vent_Aft_MainPipe_Port_Forward_ForePortFan_Door
+    'port vent door' 'port vent door'
 {
-    location = Vent_Aft_MainPipe_Forward_End;
+    isOpen = true;
+    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
+};
+Vent_Aft_MainPipe_Port_Forward_ForeStarboardFan_Door:
+    Door
+    'starboard vent door' 'starboard vent door'
+{
+    isOpen = true;
+    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
 };
 // -----------------------------------------------------------------------------

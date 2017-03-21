@@ -55,3 +55,8 @@ GameFiles/Locations/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboard.tl
 
 # VENTILATION AFT
 GameFiles/Locations/Ventilation_Aft/Lib_Ventilation_Aft.tl
+GameFiles/Locations/Ventilation_Aft/MainPipe_Port/Lib_VntAftPort_MainPipe_Port.tl
+GameFiles/Locations/Ventilation_Aft/PortFan/Lib_Ventilation_Aft_PortFan.tl
+GameFiles/Locations/Ventilation_Aft/ForePortFan/Lib_Ventilation_Aft_ForePortFan.tl
+GameFiles/Locations/Ventilation_Aft/ForeStarboardFan/Lib_Ventilation_Aft_ForeStarboardFan.tl
+GameFiles/Locations/Ventilation_Aft/MainPipe_Starboard/Lib_VntAftPort_MainPipe_Starboard.tl

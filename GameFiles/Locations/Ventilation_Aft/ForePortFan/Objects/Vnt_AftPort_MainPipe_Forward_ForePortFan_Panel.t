@@ -1,11 +1,11 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe_Panel:
+Vent_Aft_MainPipe_Port_Forward_ForePortFan_Panel:
     Switch
     'control panel' 'Control Panel'
 {
-    location = Vent_Aft_MainPipe_PortFan;
+    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
     label = 'the control panel';
     labelProper = 'The control panel';
     specialDescOrder = 10;
@@ -92,7 +92,7 @@ The switch is currently set to the \'Off\' position.\n
     {
         action()
         {
-            if (Vent_Aft_MainPipe_PortFan_Fan.isOn == nil)
+            if (Vent_Aft_MainPipe_Port_Forward_ForePortFan_Fan.isOn == nil)
             {
                 ex  = exOff;
                 exDmg = exDmgOff;
@@ -110,14 +110,14 @@ The switch is currently set to the \'Off\' position.\n
     {
         verify() 
         {
-            if (Vent_Aft_MainPipe_PortFan_Fan.isOn == nil)
+            if (Vent_Aft_MainPipe_Port_Forward_ForePortFan_Fan.isOn == nil)
             {
                 illogical('The switch is already off.');
             }
         }
         action()
         {
-            Vent_Aft_MainPipe_PortFan_Fan.TurnOff();
+            Vent_Aft_MainPipe_Port_Forward_ForePortFan_Fan.TurnOff();
             "You flip the switch off. The fan stops turning.";
         }
     };

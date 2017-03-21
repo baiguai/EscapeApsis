@@ -1,13 +1,7 @@
 #include <adv3.h>
 #include <en_us.h>
 
-/*
-Aft Port Ventilation Fan
---------------------------------------------------------------------------------
-
---------------------------------------------------------------------------------
-*/
-Vent_Aft_MainPipe_PortFan:
+Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan:
     Room
 {
     roomName = "Ventilation Fan Room";
@@ -20,14 +14,17 @@ Vent_Aft_MainPipe_PortFan:
 
     msg = [
         '
-The room beyond the vent grate is small.\n
-A red service light mounted in the center of the port wall is the\n
-only source of light.\n
+You are in a small ventilation fan room.\n
+A red service light mounted in the center of the forward wall is the only\n
+source of light.\n
+Set into the aft wall is a vent grate.\n
+In the port wall is a metal vent grate.\n
+Both grates appear to have been dislodged.\n
         '
     ];
 
     nav = [
-        ''
+        'enter port vent: Exit the fan room through the port vent.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -35,6 +32,8 @@ only source of light.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
+        cls();
+
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
@@ -42,10 +41,11 @@ only source of light.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Vent_Aft_MainPipe_PortFanVent_Opening_Inside:
-    HiddenDoor -> Vent_Aft_MainPipe_PortFanVent_Opening
-    'vent' 'vent'
+Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan_Door_Inside:
+    Door
+    'port vent door' 'port vent door'
 {
-    location = Vent_Aft_MainPipe_PortFan;
+    isOpen = true;
+    location = Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan;
 };
 // -----------------------------------------------------------------------------

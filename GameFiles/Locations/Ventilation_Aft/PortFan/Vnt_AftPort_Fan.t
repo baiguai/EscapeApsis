@@ -1,7 +1,13 @@
 #include <adv3.h>
 #include <en_us.h>
 
-Vent_Aft_MainPipe_Forward_ForePortFan:
+/*
+Aft Port Ventilation Fan
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+*/
+Vent_Aft_MainPipe_Port_PortFan:
     Room
 {
     roomName = "Ventilation Fan Room";
@@ -14,9 +20,9 @@ Vent_Aft_MainPipe_Forward_ForePortFan:
 
     msg = [
         '
-You are in a small ventilation fan room.\n
-A red service light mounted in the center of the forward wall is the only\n
-source of light.\n
+The room beyond the vent grate is small.\n
+A red service light mounted in the center of the port wall is the\n
+only source of light.\n
         '
     ];
 
@@ -29,8 +35,6 @@ source of light.\n
 // --[OUTPUT EVENTS]------------------------------------------------------------
     desc()
     {
-        cls();
-
         Desc_Location(self);
     };
 // -----------------------------------------------------------------------------
@@ -38,10 +42,10 @@ source of light.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Vent_Aft_MainPipe_Forward_End_Door_Inside:
-    Door -> Vent_Aft_MainPipe_Forward_End_Door
-    'vent door' 'vent door'
+Vent_Aft_MainPipe_Port_PortFanVent_Opening_Inside:
+    HiddenDoor -> Vent_Aft_MainPipe_Port_PortFanVent_Opening
+    'vent' 'vent'
 {
-    location = Vent_Aft_MainPipe_Forward_ForePortFan;
+    location = Vent_Aft_MainPipe_Port_PortFan;
 };
 // -----------------------------------------------------------------------------
