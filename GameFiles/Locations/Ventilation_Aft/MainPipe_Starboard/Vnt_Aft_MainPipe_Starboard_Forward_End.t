@@ -1,17 +1,10 @@
 #include <adv3.h>
 #include <en_us.h>
 
-/*
-    STARBOARD HOLD - AFT
-    ----------------------------------------------------------------------------
-    The aft portion of the starboard hold has one set of shelves along the
-    aft wall. Here the player finds a dead body.
-    ----------------------------------------------------------------------------
-*/
-Mundane_Hold_Starboard_Aft:
-    Room
+Vent_Aft_MainPipe_Starboard_Forward_End:
+    DarkRoom
 {
-    roomName = "Hold Starboard";
+    roomName = "Ventilation Pipe";
     visitCount = 0;
     descCount = 0;
     hasSpawned = nil;
@@ -21,14 +14,14 @@ Mundane_Hold_Starboard_Aft:
 
     msg = [
         '
-Set into the base of the port wall you see a ventilation grate. It appears to
-be dislodged.
+Further forward in the main ventilation pipe it ends. A vent grate is set\n
+into the pipe\'s end wall.\n
         '
     ];
 
     nav = [
-        'fore: Return to the main section of the starboard hold.',
-        'enter vent: Enter the port wall vent.'
+        'enter vent: Enter the vent in the fore end of the pipe.',
+        'aft: Aft through the main ventilation pipe.'
     ];
 // -----------------------------------------------------------------------------
 
@@ -44,27 +37,24 @@ be dislodged.
 
 
 // --[NAVIGATION]---------------------------------------------------------------
-    fore: TravelWithMessage, RoomConnector {
+    aft: TravelWithMessage, RoomConnector {
         travelDesc()
         {
-            Desc_Navigation('You return to the central area of the starboard\n
-                hold.');
+            Desc_Navigation('You crawl aft through the main ventilation pipe.');
         };
-        room1 = Mundane_Hold_Starboard_Aft;
-        room2 = Mundane_Hold_Starboard;
+        room1 = Vent_Aft_MainPipe_Starboard_Forward_End;
+        room2 = Vent_Aft_MainPipe_Starboard_Forward_End;
     };
 // -----------------------------------------------------------------------------
 };
 
 
-
-
 // --[DOORS]--------------------------------------------------------------------
-Mundane_Hold_Starboard_AirShaft:
+Vent_Aft_MainPipe_Starboard_Forward_End_Door:
     Door
-    'vent' 'vent'
+    'vent door' 'vent door'
 {
     isOpen = true;
-    location = Mundane_Hold_Starboard_Aft;
+    location = Vent_Aft_MainPipe_Starboard_Forward_End;
 };
 // -----------------------------------------------------------------------------

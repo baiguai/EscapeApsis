@@ -44,13 +44,13 @@ Vent_Aft_MainPipe_Port_Forward_ForePortFan_Door_Inside:
     'port vent door' 'port vent door'
 {
     isOpen = true;
-    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
+    location = Vent_Aft_Forward_Pipe;
 };
-Vent_Aft_MainPipe_Port_Forward_ForeStarboardFan_Door:
-    Door
+Vent_Aft_MainPipe_Starboard_Forward_End_Door_Inside:
+    Door -> Vent_Aft_MainPipe_Starboard_Forward_End_Door
     'starboard vent door' 'starboard vent door'
 {
     isOpen = true;
-    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
+    location = Vent_Aft_Forward_Pipe;
 };
 // -----------------------------------------------------------------------------

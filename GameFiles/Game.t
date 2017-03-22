@@ -112,11 +112,17 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Brig_GuardPost);
             }
-            if (k == 'hold')
+            if (k == 'ph')
             {
                 cls();
                 me.weapon = EPistol;
                 me.moveInto(Mundane_Hold_Port);
+            }
+            if (k == 'sh')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(Mundane_Hold_Starboard);
             }
             if (k == 'bh')
             {
@@ -129,18 +135,6 @@ gameMain: GameMainDef
                 cls();
                 me.weapon = EPistol;
                 me.moveInto(Mundane_Hold_Starboard);
-            }
-            if (k == 'fan')
-            {
-                cls();
-                me.weapon = EPistol;
-                me.moveInto(Vent_Aft_MainPipe_PortFan);
-            }
-            if (k == 'ffan')
-            {
-                cls();
-                me.weapon = EPistol;
-                me.moveInto(Vent_Aft_MainPipe_Forward_ForePortFan);
             }
         }
         // ---------------------------------------------------------------------
