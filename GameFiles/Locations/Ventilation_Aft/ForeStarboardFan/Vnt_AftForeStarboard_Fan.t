@@ -24,6 +24,7 @@ Both grates appear to have been dislodged.\n
     ];
 
     nav = [
+        'enter aft vent: Exit the fan room through the aft vent.',
         'enter port vent: Exit the fan room through the port vent.'
     ];
 // -----------------------------------------------------------------------------
@@ -41,9 +42,16 @@ Both grates appear to have been dislodged.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan_Door_Inside:
+Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan_Door:
     Door
     'port vent door' 'port vent door'
+{
+    isOpen = true;
+    location = Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan;
+};
+Vent_Aft_MainPipe_Starboard_Forward_End_Door_Inside:
+    Door -> Vent_Aft_MainPipe_Starboard_Forward_End_Door
+    'aft vent door' 'aft vent door'
 {
     isOpen = true;
     location = Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan;

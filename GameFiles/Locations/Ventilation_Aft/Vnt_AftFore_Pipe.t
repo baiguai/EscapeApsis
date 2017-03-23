@@ -46,8 +46,8 @@ Vent_Aft_MainPipe_Port_Forward_ForePortFan_Door_Inside:
     isOpen = true;
     location = Vent_Aft_Forward_Pipe;
 };
-Vent_Aft_MainPipe_Starboard_Forward_End_Door_Inside:
-    Door -> Vent_Aft_MainPipe_Starboard_Forward_End_Door
+Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan_Door_Inside:
+    Door -> Vent_Aft_MainPipe_Starboard_Forward_ForeStarboardFan_Door
     'starboard vent door' 'starboard vent door'
 {
     isOpen = true;

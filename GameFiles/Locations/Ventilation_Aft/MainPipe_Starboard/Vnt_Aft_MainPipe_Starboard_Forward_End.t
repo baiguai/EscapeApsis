@@ -43,7 +43,7 @@ into the pipe\'s end wall.\n
             Desc_Navigation('You crawl aft through the main ventilation pipe.');
         };
         room1 = Vent_Aft_MainPipe_Starboard_Forward_End;
-        room2 = Vent_Aft_MainPipe_Starboard_Forward_End;
+        room2 = Vent_Aft_MainPipe_Starboard_Forward;
     };
 // -----------------------------------------------------------------------------
 };
