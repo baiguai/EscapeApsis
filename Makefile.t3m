@@ -49,9 +49,12 @@ GameFiles/Locations/Brig/GuardPost/Lib_Brig_GuardPost.tl
 GameFiles/Locations/Brig/Hall/Lib_Brig_Hall.tl
 
 # MUNDANE HOLD
-GameFiles/Locations/Mundane_Hold_Access/Lib_Mundane_Hold_Access.tl
-GameFiles/Locations/Mundane_Hold_Port/Lib_Mundane_Hold_Port.tl
-GameFiles/Locations/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboard.tl
+GameFiles/Locations/Hold_Mundane/Mundane_Hold_Access/Lib_Mundane_Hold_Access.tl
+GameFiles/Locations/Hold_Mundane/Mundane_Hold_Port/Lib_Mundane_Hold_Port.tl
+GameFiles/Locations/Hold_Mundane/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboard.tl
+
+# HOLD
+GameFiles/Locations/Hold/Hold_Access/Lib_Hold_Access.tl
 
 # VENTILATION AFT
 GameFiles/Locations/Ventilation_Aft/Lib_Ventilation_Aft.tl

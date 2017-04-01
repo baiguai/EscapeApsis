@@ -72,8 +72,8 @@ Aft, in the shadows are more shelves.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Mindane_Hold_Access_Port_Door_Inside:
-    Door -> Mindane_Hold_Access_Port_Door
+Mundane_Hold_Access_Port_Door_Inside:
+    Door -> Mundane_Hold_Access_Port_Door
     'hold door' 'hold door'
 {
     location = Mundane_Hold_Port;

@@ -62,8 +62,8 @@ A narrow path between the stacks of parts leads aft, further into the hold.\n
 
 
 // --[DOORS]--------------------------------------------------------------------
-Mindane_Hold_Access_Starboard_Door_Inside:
-    Door -> Mindane_Hold_Access_Starboard_Door
+Mundane_Hold_Access_Starboard_Door_Inside:
+    Door -> Mundane_Hold_Access_Starboard_Door
     'hold door' 'hold door'
 {
     location = Mundane_Hold_Starboard;

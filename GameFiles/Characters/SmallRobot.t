@@ -14,7 +14,7 @@ SmallRobot:
     Actor
     'small robot' 'Small Robot'
 {
-    location = Vent_Aft_MainPipe_Forward_ForePortFan;
+    location = Vent_Aft_MainPipe_Port_Forward_ForePortFan;
     label = 'the robot';
     labelProper = 'The robot';
     noun = 'robot';
