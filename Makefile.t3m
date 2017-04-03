@@ -56,6 +56,10 @@ GameFiles/Locations/Hold_Mundane/Mundane_Hold_Starboard/Lib_Mundane_Hold_Starboa
 # HOLD
 GameFiles/Locations/Hold/Hold_Access/Lib_Hold_Access.tl
 
+# ENGINE ROOM
+GameFiles/Locations/EngineRoom/Lib_EngineRoom.tl
+GameFiles/Locations/EngineRoom/FuelCells/Lib_FuelCells.tl
+
 # VENTILATION AFT
 GameFiles/Locations/Ventilation_Aft/Lib_Ventilation_Aft.tl
 GameFiles/Locations/Ventilation_Aft/MainPipe_Port/Lib_VntAft_MainPipe_Port.tl

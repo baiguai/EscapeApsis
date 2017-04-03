@@ -49,7 +49,7 @@ In the center of the floor is a small access porthole.
             Desc_Navigation('You open the porthole and crawl down into it.');
         };
         room1 = Hold_Access;
-        room2 = Hold_Access;
+        room2 = EngineRoom;
     };
 // -----------------------------------------------------------------------------
 };

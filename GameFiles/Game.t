@@ -136,6 +136,12 @@ gameMain: GameMainDef
                 me.weapon = EPistol;
                 me.moveInto(Mundane_Hold_Starboard);
             }
+            if (k == 'er')
+            {
+                cls();
+                me.weapon = EPistol;
+                me.moveInto(EngineRoom);
+            }
         }
         // ---------------------------------------------------------------------
 
